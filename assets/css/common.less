@@ -1,0 +1,191 @@
+@import "./fonts/Lato/latofonts.css";
+@import "./bootstrap/less/bootstrap.less";
+
+@fixed-max-width: 1170px;
+@img-path: 'img/';
+@sprite: 'img/sprite.png';
+/*@accent-font-family: "PF DinDisplay Pro Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+/*@italic-font-family: "LatoWebBlack", @font-family-sans-serif;*/
+
+/* dev */
+/*html {
+  height: 100%;
+}*/
+body {
+  //height: 100%;
+  position: relative;
+  &::after {
+    content: "";
+    background: url('@{img-path}design.jpg') no-repeat; // fixed;
+    background-size: auto;
+    background-position-x: center;
+    background-position-y: 0;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    /*height: 5000px;*/
+  }
+}
+
+/* typografy */
+h1, h2, h3 {
+  .text-uppercase;
+}
+strong, b {
+  font-family: @headings-font-family;
+  font-weight: @headings-font-weight;
+}/*
+em, i {
+  font-family: @italic-font-family;
+}*/
+a.gray-link {
+  color: lighten(@link-color, 30%);
+}
+a.green-link {
+  color: @brand-success;
+}
+.cite-left, .cite-right, .cite-big {
+  font-family: @headings-font-family;
+  font-style: italic;  
+}
+.cite-left, .cite-right {
+  font-size: 24px;
+  line-height: 28px;
+  padding: 12px 22px;
+}
+.cite-left {
+  border-left: 2px solid;
+}
+.cite-right {
+  border-right: 2px solid;
+  text-align: right;
+}
+.cite-big {
+  font-size: 30px;
+  line-height: 35px;
+  padding: 24px 0 41px 28px;
+  border-bottom: 2px solid #d3d4d8;
+  position: relative;
+  &::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+  }
+}
+.btn {
+  font-family: "LatoWebHeavy", @headings-font-family;
+  font-size: 10px;
+  .text-uppercase;
+}
+/* text with columns */
+@media (min-width: @screen-sm) {
+  .text-two-columns {
+    -moz-columns: 2;
+    -webkit-columns: 2;
+    columns: 2;
+    -moz-column-gap: @grid-gutter-width * 3;
+    -webkit-column-gap: @grid-gutter-width * 3;
+    column-gap: @grid-gutter-width * 3;
+    p, li {
+      -moz-column-break-inside: avoid;
+      -webkit-column-break-inside: avoid;
+      column-break-inside: avoid;
+    }
+  }
+}
+
+/* grid */
+/* fixed max width */
+.container-fluid {
+  max-width: @fixed-max-width;
+}
+/*main *, .header-top * {
+  transition: all 0.2s ease-in-out 0s;
+}*/
+header {
+  height: 150px;
+}
+main {
+  .container-fluid;
+  .breadcrumb {
+    .row;
+    height: 67px;
+    font-family: @headings-font-family;
+    font-size: 10px;
+    .text-uppercase;
+    margin-bottom: 0;
+  }
+  .page-header {
+    height: 65px;
+  }
+}
+.column-wrapper {
+  .row;
+  display: flex;
+  .left-column {
+    width: 280px;
+    padding-right: 50px;
+  }
+  .right-column {
+    flex: 1;
+  }
+}
+span.icon {
+  font-size: 12px;
+  padding-left: 20px;
+  position: relative;
+  margin-right: 11px;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    background: url('@{sprite}') no-repeat;
+    width: 16px;
+    height: 16px;
+  }
+  &.favorites-count::before {
+    background-position: 0 0;
+  }
+  &.myfavorite::before {
+    background-position: -16px 0;
+  }
+  &.comments-count::before {
+    background-position: 0 -16px;
+  }
+}
+
+/* news */
+.news-list {
+  .news-item {
+    .clearfix;
+    margin-bottom: 50px;
+    .news-item-image {
+      float: left;
+      width: 259px;
+      height: 200px;
+      img {
+        .img-responsive;
+      }
+    }
+    .news-item-content {
+      padding: 20px 0 0 289px;
+      h3 {
+        font-family: "LatoWebHeavy", @headings-font-family;
+        margin-bottom: 16px;
+      }
+      p {
+        color: @gray;
+        line-height: 17px;
+        margin-bottom: 15px;
+      }
+      .btn {
+        width: 126px;
+        margin-right: 15px;
+      }
+    }
+  }
+}
