@@ -4,20 +4,22 @@
     <title>Content</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/common.css">
-    <!--<link rel="stylesheet" href="assets/css/jquery.formstyler.css">-->
-<!--    <script src="assets/js/libs/jquery-2.1.4.min.js"></script>
-    <script src="assets/js/libs/sticky-kit.min.js"></script>
-    <script src="assets/js/libs/jquery.pin.js"></script>
-    <script src="assets/js/libs/bootstrap/tab.js"></script>
-    <script src="assets/js/libs/jquery.formstyler.min.js"></script>
-    <script src="assets/js/common.js?v1"></script>-->
+    <link rel="import" href="components.html">
+    <script>
+      var components = document.querySelector('link[rel=import]');
+    </script>
   </head>
   <body>
     
-    <header>
-      
-    </header>
+    <script>
+      var content = components.import.querySelector('header');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
+    <script>
+      var content = components.import.querySelector('#comp_searchbar');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
     
     <main>
     
@@ -30,7 +32,10 @@
       <div class="column-wrapper">
       
         <div class="left-column">
-
+          <script>
+            var content = components.import.querySelector('#comp_left');
+            document.querySelector('main .left-column').appendChild(content.cloneNode(true));
+          </script>
         </div> <!-- .left-column -->
 
         <div class="right-column">
@@ -58,14 +63,60 @@
             <p>Манилов, приглашая Чичикова к себе, сообщил ему, что его деревня находится в пятнадцати верстах от города, но уже минула и шестнадцатая верста, а деревни никакой не было. Павел Иванович был человек сообразительный, и вспомнил, если тебя приглашают в дом за пятнадцать верст, стало быть, ехать придется все тридцать.</p>
             <p><strong>Чичиков остается ночевать. Проснувшись, он разглядывает в окошко хозяйство помещицы и деревню, в которой оказался. Окно выходит на курятник и забор. За забором тянутся пространные грядки с овощами. Все посадки на огороде продуманы, кое-где растут несколько яблонь для защиты от птиц, от них же понатыканы чучела с растопыренными руками, на одном из этих пугал был чепец самой хозяйки. Внешний вид крестьянских домов показывал "довольство их обитателей". Тес на крышах был везде новый, нигде не было видно покосившихся ворот, а кое-где Чичиков увидел и стоявшую новую запасную телегу.</strong></p>
             <p><em>Но вот и деревня Маниловка. Немногих гостей могла она заманить к себе. Господский дом стоял на юру, открытый всем ветрам; возвышенность, на которой он стоял, была покрыта дерном. Две-три клумбы с акацией, пять-шесть жиденьких берез, деревянная беседка и пруд довершали эту картину. Чичиков принялся считать и насчитал более двухсот крестьянских изб. На крыльце господского дома уже давно стоял его хозяин и, приставив руку к глазам, пытался разглядеть подъезжающего в экипаже человека. По мере приближения брички лицо Манилова менялось: глаза становились все веселее, а улыбка — все шире. Он очень обрадовался появлению Чичикова и повел его к себе.</em></p>
+            
+            <br>
+            <br>
+            <div class="row">
+              <div class="col-sm-3">
+                <p><button class="btn btn-primary">Кнопка</button></p>
+                <p><button class="btn btn-primary" disabled>Отключена</button></p>
+                <div class="form-group">
+                  <label for="exampleInputName1">Обычный</label>
+                  <input type="text" class="form-control" id="exampleInputName1" placeholder="Placeholder">
+                  <span class="help-block">Подпись</span>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <p><button class="btn btn-default">Кнопка</button></p>
+                <p><button class="btn btn-default" disabled>Отключена</button></p>
+                <div class="form-group has-error">
+                  <label for="exampleInputName2">Ошибка</label>
+                  <input type="text" class="form-control" id="exampleInputName2" placeholder="Placeholder" value="vicpetrova">
+                  <span class="help-block">Подпись</span>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <p><button class="btn btn-danger">Кнопка</button></p>
+                <p><button class="btn btn-danger" disabled>Отключена</button></p>
+                <div class="form-group has-success">
+                  <label for="exampleInputName3">Успешно</label>
+                  <input type="text" class="form-control" id="exampleInputName3" placeholder="Placeholder" value="vicpetrova">
+                  <span class="help-block">Подпись</span>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <p><button class="btn btn-success">Кнопка</button></p>
+                <p><button class="btn btn-success" disabled>Отключена</button></p>
+              </div>
+            </div>
+            <br>
+            <br>
+            <p><a href="#">Обычная ссылка</a></p>
+            <p><a href="#" class="gray-link">Серая ссылка</a></p>
+            <p><a href="#" class="green-link">Зеленая ссылка</a></p>
+            <br>
+            <br>
 
         </div> <!-- .right-column -->
 
       </div> <!-- .row -->
       
     </main>
-    <footer>
-      
-    </footer>
+    
+    <script>
+      var content = components.import.querySelector('footer');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
   </body>
 </html>
