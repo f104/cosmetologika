@@ -223,7 +223,7 @@ header {
         height: 7px;
         right: 24px;
         top: 20px;
-        background: @body-bg;
+        background: url('@{sprite}') 0 -70px no-repeat;
       }
     }
   }
@@ -242,6 +242,9 @@ header {
     }
     input {
       .form-control;
+      &:focus, &:active {
+        border-color: @input-border;
+      }
     }
     button {
       .btn; .btn-danger;
@@ -271,7 +274,7 @@ header {
         left: 20px;
         width: 18px;
         height: 18px;
-        background: white;
+        background: url('@{sprite}') 0 -50px no-repeat;
       }
       span {
         position: absolute;
@@ -356,7 +359,7 @@ header {
         top: 17px;
         width: 16px;
         height: 16px;
-        background: @body-bg;
+        background: url('@{sprite}') 0 -32px no-repeat;
       }
     }
   }
@@ -549,11 +552,14 @@ span.icon {
       &::after {
         content: '';
         position: absolute;
-        right: 7px;
-        bottom: 17px;
-        width: 9px;
-        height: 5px;
-        background: @brand-danger;
+        right: 6px;
+        bottom: 16px;
+        width: 11px;
+        height: 6px;
+        background: url('@{sprite}') -13px -70px no-repeat;
+      }
+      &.opened::after {
+        background-position: -25px -70px;
       }
     }    
     &:first-child > a {

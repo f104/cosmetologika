@@ -2892,7 +2892,8 @@ select[multiple].input-lg {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #55618c;
+  color: #5f6c9c;
+  font-size: 11px;
 }
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -6988,7 +6989,7 @@ fieldset[disabled] .searchbar .left-column .searchbar-catalog.focus {
   height: 7px;
   right: 24px;
   top: 20px;
-  background: #ffffff;
+  background: url('img/sprite.png') 0 -70px no-repeat;
 }
 .searchbar .right-column > * {
   display: table-cell;
@@ -7050,6 +7051,10 @@ fieldset[disabled] .searchbar .searchbar-form input {
 }
 textarea.searchbar .searchbar-form input {
   height: auto;
+}
+.searchbar .searchbar-form input:focus,
+.searchbar .searchbar-form input:active {
+  border-color: #cccccc;
 }
 .searchbar .searchbar-form button {
   display: inline-block;
@@ -7185,7 +7190,7 @@ fieldset[disabled] .searchbar .searchbar-form button.focus {
   left: 20px;
   width: 18px;
   height: 18px;
-  background: white;
+  background: url('img/sprite.png') 0 -50px no-repeat;
 }
 .searchbar .minicart a span {
   position: absolute;
@@ -7276,7 +7281,7 @@ fieldset[disabled] .searchbar .searchbar-form button.focus {
   top: 17px;
   width: 16px;
   height: 16px;
-  background: #ffffff;
+  background: url('img/sprite.png') 0 -32px no-repeat;
 }
 main {
   margin-right: auto;
@@ -7523,11 +7528,14 @@ span.icon.comments-count::before {
 .aside-menu > li > a::after {
   content: '';
   position: absolute;
-  right: 7px;
-  bottom: 17px;
-  width: 9px;
-  height: 5px;
-  background: #cf1b42;
+  right: 6px;
+  bottom: 16px;
+  width: 11px;
+  height: 6px;
+  background: url('img/sprite.png') -13px -70px no-repeat;
+}
+.aside-menu > li > a.opened::after {
+  background-position: -25px -70px;
 }
 .aside-menu > li:first-child > a {
   padding-top: 0;
