@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+  
   // aside menu accordeon
   (function($) {
     $('.aside-menu > li > a').click(function(event) {
@@ -16,5 +16,13 @@ $(document).ready(function () {
       $(this).toggleClass('opened');
     });
   })(jQuery);
-    
+  
+  $('.goods-gallery ul').slick({
+    adaptiveHeight: true,
+    arrows: false,
+    dots: true
+  });
+  
+  $('.js-tab-container').easytabs();
+  
 });

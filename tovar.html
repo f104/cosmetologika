@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Товар</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="import" href="components.html">
+    <script>
+      var components = document.querySelector('link[rel=import]');
+    </script>
+  </head>
+  <body>
+    
+    <script>
+      var content = components.import.querySelector('header');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
+    <script>
+      var content = components.import.querySelector('#comp_searchbar');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
+    <main>
+    
+      <ol class="breadcrumb">
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Каталог</a></li>
+        <li><a href="#">Омоложение</a></li>
+        <li class="active">Cytolife Laboratory Repare Remodulator HA 0.6% +Zn</li>
+      </ol>
+      
+      <div class="column-wrapper">
+      
+        <div class="left-column">
+          <script>
+            var content = components.import.querySelector('#comp_left');
+            document.querySelector('main .left-column').appendChild(content.cloneNode(true));
+          </script>
+        </div> <!-- .left-column -->
+
+        <div class="right-column">
+
+            
+          <section class="goods">
+            <div class="goods-gallery">
+              <ul>
+                <li><img src="assets/images/goods/slider1.jpg" alt="Cytolife Laboratory Repare Remodulator HA 0.6% +Z"></li>
+                <li><img src="assets/images/goods/slider2.jpg" alt="Cytolife Laboratory Repare Remodulator HA 0.6% +Z"></li>
+                <li><img src="assets/images/goods/slider3.jpg" alt="Cytolife Laboratory Repare Remodulator HA 0.6% +Z"></li>
+              </ul>
+            </div>
+            <div class="goods-info">
+              <h1>Cytolife Laboratory Repare Remodulator HA 0.6% +Zn</h1>
+              <p>Ничто так ясно не подтверждает этого, как описательная поэзия и в особенности романы прошедшего и нашего века.</p>
+              <p>В следующий раз я пришел на бойню вовремя. Это было в пятницу перед Троицыным днём. Был жаркий июньский день.</p>
+              <p><strong>Артикул:</strong> 8924.54.721<br>
+                <strong>Вес:</strong> 0.1 кг<br>
+                <strong>Объем:</strong> 50мл</p>
+              <p class="price"><span class="cost">3 199 руб</span> <span class="cost-old">3 999 руб</span></p>
+              <div class="goods-buttons">
+                <button class="btn btn-primary">В корзину</button>
+                <button class="btn btn-default">В избранное</button>
+                <button class="btn btn-default">К сравнению</button>
+              </div>
+              <div class="discount">-20%</div>
+            </div>
+          </section>
+          
+          <section class="goods-tabs js-tab-container">
+             <ul class="nav nav-tabs">
+              <li><a href="#info">Характеристики</a></li>
+              <li><a href="#video">Видео</a></li>
+              <li><a href="#doc">Документация</a></li>
+              <li><a href="#review">Отзывы (15)</a></li>
+            </ul>
+            <div id="info">
+              <h3>Описание и характеристики</h3>
+              <div>
+                <div class="content">
+                  <p>Мужчины большей частью при этом курят папиросы пли сигары и затем читают газету свежую, только что принесенную. Потом хождение из дома на службу или по делам, пли езда в экипажах, нарочно существующих для перевозки этих людей. Потом завтрак из убитых животных, птиц, рыб, потом обед такой же, при большой скромности из трех блюд, — сладкое блюдо, кофе, потом игра — карты, и игра — музыка, пли театр, чтение или беседа в мягких пружинных креслах при усиленном и смягченном свете свечи, газа, электричества, — опять чан, опять еда, ужин и опять в постель, приготовленную, взбитую с чистым бельем и с очищенной посудой.</p>
+                </div>
+                <div class="options">
+                  <p><strong>Волшебные свойства</strong></p>
+                  <ul>
+                    <li>Омолаживает</li>
+                    <li>Укрепляет брови</li>
+                    <li>Поднимает настроение</li>
+                    <li>Успокаивает</li>
+                    <li>Помогает по хозяйству</li>
+                    <li>Готовит еду</li>
+                  </ul>
+                </div>              
+              </div>              
+            </div>
+            <div id="video">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/9bZkp7q19f0?rel=0" frameborder="0" allowfullscreen></iframe>
+              </div>
+                <a href="https://www.youtube.com/embed/H65p1qdiAXE?rel=0"><img src="https://i.ytimg.com/vi/H65p1qdiAXE/hqdefault.jpg?custom=true&w=246&h=138&stc=true&jpg444=true&jpgq=90&sp=68&sigh=MEYTJb7q6k4SfzsHOudr8hwDrY0"></a>
+                <p>Бюджетная косметика — обзор, аналоги, что купить</p>
+                <a id="test" href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1">test</a>
+                <a href="//www.youtube.com/embed/otM8EzzyD-g?rel=0"><img src="https://i.ytimg.com/vi/otM8EzzyD-g/hqdefault.jpg?custom=true&w=246&h=138&stc=true&jpg444=true&jpgq=90&sp=68&sigh=VPK97mi7GjwhCOuc_bkal_Rgjqw"></a>
+                <p>Обзор косметики Maybelline | Babylips, Baby skin, Color Tattoo, Dream Flawless nude | Часть 1</p>
+            </div>
+            <div id="doc">
+              <h3>Документация</h3>
+              
+            </div>
+            <div id="review">
+              <h2>CSS Styles for these tabs</h2>
+              <!-- content -->
+            </div>
+          </section>
+          
+          <section class="related-goods">
+            <h2>С этим товаром покупают:</h2>
+            <div class="goods-list-grid row">
+              
+              <div class="goods-list-item col-sm-3">
+                <div class="content">
+                  <a href="#"><img src="assets/images/goods/1.jpg" alt="good1"></a>
+                  <h3><a href="#">CYTOLIFE HYALURONIC ACID&nbsp;HA 1,2%</a></h3>
+                  <p><span class="cost">3 199 руб</span> <span class="cost-old">3 999 руб</span></p>
+                </div>
+                <div class="footer">
+                  <form><button class="btn btn-primary">В корзину</button></form>
+                  <div>
+                    <a href="#" class="icon compare" title="Сравнить">Сравнить</a>
+                    <a href="#" class="icon favorite" title="В избранное">В избранное</a>
+                  </div>
+                </div>
+                <div class="discount">-20%</div>
+              </div>
+              
+              <div class="goods-list-item col-sm-3">
+                <div class="content">
+                  <a href="#"><img src="assets/images/goods/2.jpg" alt="good2"></a>
+                  <h3><a href="#">CYTOLIFE AQUA+ MESOLIFT&nbsp;0,9%</a></h3>
+                  <p><span class="cost">2 550 руб</span></p>
+                </div>
+                <div class="footer">
+                  <form><button class="btn btn-primary">В корзину</button></form>
+                  <div>
+                    <a href="#" class="icon compare active" title="Сравнить">Сравнить</a>
+                    <a href="#" class="icon favorite" title="В избранное">В избранное</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="goods-list-item col-sm-3">
+                <div class="content">
+                  <a href="#"><img src="assets/images/goods/3.jpg" alt="good3"></a>
+                  <h3><a href="#">CYTOLIFE REMODULATOR 1,1%+Zn</a></h3>
+                  <p><span class="cost">2 840 руб</span></p>
+                </div>
+                <div class="footer">
+                  <form><button class="btn btn-primary">В корзину</button></form>
+                  <div>
+                    <a href="#" class="icon compare" title="Сравнить">Сравнить</a>
+                    <a href="#" class="icon favorite active" title="В избранное">В избранное</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="goods-list-item col-sm-3">
+                <div class="content">
+                  <a href="#"><img src="assets/images/goods/4.jpg" alt="good4"></a>
+                  <h3><a href="#">MezoLax HSR (1x5ml)</a></h3>
+                  <p><span class="cost">1 189 руб</span></p>
+                </div>
+                <div class="footer">
+                  <form><button class="btn btn-primary">В корзину</button></form>
+                  <div>
+                    <a href="#" class="icon compare" title="Сравнить">Сравнить</a>
+                    <a href="#" class="icon favorite" title="В избранное">В избранное</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div> <!-- .right-column -->
+
+      </div> <!-- .row -->
+      
+    </main>
+    
+    <footer>
+      <div class="footer-one">
+        <div class="container-fluid">
+          <div class="footer-one-wrapper">
+            <div class="footer-about">
+              <a href="#"><img src="assets/images/logo-small.png" alt="cosmetologika"></a>
+              Судья, попечитель богоугодных заведений, смотритель училищь и почтмейстер уходят.
+            </div>
+            <div class="footer-contacts">
+              <h3>Контакты</h3>
+              <p>+7 (831) 550 45 25<br>
+                <a href="mailto:hello@kosmetologika.ru">hello@kosmetologika.ru</a></p>
+            </div>
+            <div class="footer-menu">
+              <h3>Каталог</h3>
+              <menu>
+                <li><a href="#">Омоложение</a></li>
+                <li><a href="#">Волосы</a></li>
+                <li><a href="#">Макияж</a></li>
+                <li><a href="#">Для мужчин</a></li>
+                <li><a href="#">Уход за кожей</a></li>
+                <li><a href="#">Аксессуары</a></li>
+                <li><a href="#">Ногти</a></li>
+                <li><a href="#">Тело</a></li>
+                <li><a href="#">Расходники</a></li>
+              </menu>
+            </div>
+            <div class="footer-payments">
+              <h3>Способы оплаты</h3>
+              <ul>
+                <li class="visa">visa</li>
+                <li class="mc">mc</li>
+                <li class="wm">wm</li>
+                <li class="qiwi">qiwi</li>
+                <li class="ym">ym</li>
+                <li class="alfa">alfa</li>
+                <li class="sber">sber</li>
+                <li class="pp">pp</li>
+                <li class="maestro">maestro</li>
+                <li class="cirrus">cirrus</li>
+              </ul>
+              <div class="footer-madein">
+                Made in&nbsp;&nbsp;<a href="#"><img src="assets/images/riverstart.png" alt="riverstart"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-two">
+        <div class="container-fluid">
+          <p>ООО "Косметологика &copy; 2016</p>
+          <menu>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Оплата и доставка</a></li>
+          </menu>
+        </div>
+      </div>
+      
+    </footer>
+    
+  </body>
+</html>
