@@ -25,4 +25,11 @@ $(document).ready(function () {
   
   $('.js-tab-container').easytabs();
   
+  $('.js-video-iframe').fancybox({
+    maxWidth	: 800,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none'
+  });
+  
 });

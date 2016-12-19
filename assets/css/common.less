@@ -14,7 +14,7 @@
 body {
   //height: 100%;
   position: relative;
-  &::after {
+/*  &::after {
     content: "";
     background: url('@{img-path}design.jpg') no-repeat; // fixed;
     background-size: auto;
@@ -27,7 +27,7 @@ body {
     right: 0;
     position: absolute;
     z-index: -1;
-  }
+  }*/
 }
 * {
   transition: all 0.2s ease-in-out 0s;
@@ -729,18 +729,31 @@ a.icon {
 }
 .goods-tabs {
   > div {
-    padding: 40px 6px 0;
+    padding: 40px 0 0 6px;
   }
-  #info {
+  #info, #video {
     > div {
       > .content {
         display: inline-block;
+        width: 100%; // иначе iframe на видео косячит
         max-width: 640px;
+        vertical-align: top;
         padding-right: 50px;
         color: @gray;
       }
       > .options {
         display: inline-block;
+        max-width: 240px;
+        vertical-align: top;
+        .more-video {
+          img {
+            .img-responsive;
+            margin-bottom: 10px;
+          }
+          p {
+            margin-bottom: 30px;
+          }
+        }
       }
       line-height: 17px;
     }

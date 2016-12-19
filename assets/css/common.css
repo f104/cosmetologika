@@ -6603,21 +6603,21 @@ main .breadcrumb:after {
   height: 100%;
 }*/
 body {
-  position: relative;
-}
-body::after {
-  content: "";
-  background: url('img/design.jpg') no-repeat;
-  background-size: auto;
-  background-position-x: center;
-  background-position-y: 0;
-  opacity: 0.4;
-  top: 0px;
-  left: 0px;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
+  position: relative
+  /*  &::after {
+    content: "";
+    background: url('@{img-path}design.jpg') no-repeat; // fixed;
+    background-size: auto;
+    background-position-x: center;
+    background-position-y: 0;
+    opacity: 0.4;
+    top: 0px;
+    left: 0px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }*/
 }
 * {
   -webkit-transition: all 0.2s ease-in-out 0s;
@@ -7913,19 +7913,37 @@ a.icon.favorite.active {
   margin-right: 5px;
 }
 .goods-tabs > div {
-  padding: 40px 6px 0;
+  padding: 40px 0 0 6px;
 }
-.goods-tabs #info > div {
+.goods-tabs #info > div,
+.goods-tabs #video > div {
   line-height: 17px;
 }
-.goods-tabs #info > div > .content {
+.goods-tabs #info > div > .content,
+.goods-tabs #video > div > .content {
   display: inline-block;
+  width: 100%;
   max-width: 640px;
+  vertical-align: top;
   padding-right: 50px;
   color: #666977;
 }
-.goods-tabs #info > div > .options {
+.goods-tabs #info > div > .options,
+.goods-tabs #video > div > .options {
   display: inline-block;
+  max-width: 240px;
+  vertical-align: top;
+}
+.goods-tabs #info > div > .options .more-video img,
+.goods-tabs #video > div > .options .more-video img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.goods-tabs #info > div > .options .more-video p,
+.goods-tabs #video > div > .options .more-video p {
+  margin-bottom: 30px;
 }
 .related-goods h2 {
   margin-bottom: 50px;
