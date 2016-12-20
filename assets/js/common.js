@@ -17,11 +17,38 @@ $(document).ready(function () {
     });
   })(jQuery);
   
-  $('.goods-gallery ul').slick({
+  // goods list toggler
+  (function($) {
+    $('.grid-options').click(function(event) {
+      event.preventDefault();
+      if ($(this).hasClass('active')) {
+        return;
+      } else {
+        var className = $(this).data('list');
+        $('.goods-list').removeClass('full grid short');
+        $('.goods-list').addClass(className);        
+      }
+      $(this).siblings().removeClass('active');
+      $(this).addClass('active');
+    });
+  })(jQuery);
+  
+  $('.goods-gallery ul, .reviews-slider ul, .big-slider ul').slick({
     adaptiveHeight: true,
     arrows: false,
     dots: true
   });
+  
+  $('.goods-list-recent').each(function(){
+    var slides = $(this).data('slides');
+    $(this).slick({
+      slidesToShow: slides,
+      slidesToScroll: slides,
+      infinite: false
+    });
+  });
+  
+  $('select, input[type=file]').styler();
   
   $('.js-tab-container').easytabs();
   

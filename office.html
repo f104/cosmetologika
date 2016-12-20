@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Личный кабинет</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="import" href="components.html">
+    <script>
+      var components = document.querySelector('link[rel=import]');
+    </script>
+  </head>
+  <body>
+    
+    <script>
+      var content = components.import.querySelector('header');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
+    <script>
+      var content = components.import.querySelector('#comp_searchbar');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
+    <main>
+    
+      <ol class="breadcrumb">
+        <li><a href="#">Главная</a></li>
+        <li class="active">Личный кабинет</li>
+      </ol>
+      
+      <div class="column-wrapper">
+      
+        <div class="left-column">
+          <script>
+            var content = components.import.querySelector('#comp_left');
+            document.querySelector('main .left-column').appendChild(content.cloneNode(true));
+          </script>
+        </div> <!-- .left-column -->
+
+        <div class="right-column">
+
+          <section class="user-tabs js-tab-container">
+             <ul class="nav nav-tabs">
+              <li><a href="#profile">Профиль</a></li>
+              <li><a href="#orders">Мои заказы</a></li>
+              <li><a href="#bonus">Бонусы (1720)</a></li>
+              <li><a href="#video">Видео</a></li>
+            </ul>
+            <div id="profile">
+              <div class="flex-wrapper">
+                <div class="avatar">
+                  <img src="assets/images/user-big.jpg" alt="avatar">
+                  <a href="#">Удалить</a>
+                </div>
+                <form class="well-form">
+                  <fieldset>
+                    <div class="form-group">
+                      <label for="name">ФИО</label>
+                      <input type="text" name="name" id="name" value="Петрова Виктория Константиновна">
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email (логин)</label>
+                      <input type="email" name="email" id="email" value="vicpetrova@mail.ru">
+                    </div>
+                    <div class="form-group">
+                      <label for="phone">Телефон</label>
+                      <input type="text" name="phone" id="phone" value="+7 (950) 350 21 43">
+                    </div>
+                    <div class="form-group">
+                      <label for="password">Пароль</label>
+                      <input type="password" name="password" id="password" value="********">
+                    </div>
+                    <div class="form-group">
+                      <label for="file">Сертификат</label>
+                      <input type="file" name="file" id="file" data-placeholder="Выбрать файл на компьютере" data-browse="Обзор">
+                    </div>
+                  </fieldset>
+                  <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+                </form>
+                <div class="social">
+                  <p><strong>Социальные сети</strong></p>
+                  <ul class="social-login">
+                    <li><a href="#" class="vk">Вконтакте</a></li>
+                    <li><a href="#" class="facebook">Facebook</a></li>
+                    <li><a href="#" class="twitter">Twitter</a></li>
+                    <li><a href="#" class="google">Google Plus</a></li>
+                    <li><a href="#" class="yandex">Яндекс</a></li>
+                  </ul>
+                  <p class="help-block">Вы можете использовать быстрый вход через социальные сети, при условии, что вы уже зарегистрировались через почту и привязали какой-то из сервисов к своей учетной записи.</p>
+                </div>
+              </div>
+            </div>
+            <div id="orders">
+              <table>
+                <thead>
+                  <th>№</th>
+                  <th>Дата</th>
+                  <th>Сумма</th>
+                  <th>Кол-во</th>
+                  <th>Действия</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2451</td>
+                    <td>13.11.16 в 08:02</td>
+                    <td>17 200.00</td>
+                    <td>24</td>
+                    <td>
+                      <a class="icon print" href="#" title="Распечатать">Распечатать</a>
+                      <a class="icon pdf" href="#" title="Скачать pdf">Скачать pdf</a>
+                      <a class="icon view" href="#" title="Просмотреть">Просмотреть</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2120</td>
+                    <td>24.10.16 в 06:06</td>
+                    <td>86 450.00</td>
+                    <td>181</td>
+                    <td>
+                      <a class="icon print" href="#" title="Распечатать">Распечатать</a>
+                      <a class="icon pdf" href="#" title="Скачать pdf">Скачать pdf</a>
+                      <a class="icon view" href="#" title="Просмотреть">Просмотреть</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1996</td>
+                    <td>11.10.16 в 02:53</td>
+                    <td>13 480.00</td>
+                    <td>11</td>
+                    <td>
+                      <a class="icon print" href="#" title="Распечатать">Распечатать</a>
+                      <a class="icon pdf" href="#" title="Скачать pdf">Скачать pdf</a>
+                      <a class="icon view" href="#" title="Просмотреть">Просмотреть</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1312</td>
+                    <td>08.10.16 в 14:54</td>
+                    <td>124 560.00</td>
+                    <td>321</td>
+                    <td>
+                      <a class="icon print" href="#" title="Распечатать">Распечатать</a>
+                      <a class="icon pdf" href="#" title="Скачать pdf">Скачать pdf</a>
+                      <a class="icon view" href="#" title="Просмотреть">Просмотреть</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2451</td>
+                    <td>13.11.16 в 08:02</td>
+                    <td>17 200.00</td>
+                    <td>24</td>
+                    <td>
+                      <a class="icon print" href="#" title="Распечатать">Распечатать</a>
+                      <a class="icon pdf" href="#" title="Скачать pdf">Скачать pdf</a>
+                      <a class="icon view" href="#" title="Просмотреть">Просмотреть</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2120</td>
+                    <td>24.10.16 в 06:06</td>
+                    <td>86 450.00</td>
+                    <td>181</td>
+                    <td>
+                      <a class="icon print" href="#" title="Распечатать">Распечатать</a>
+                      <a class="icon pdf" href="#" title="Скачать pdf">Скачать pdf</a>
+                      <a class="icon view" href="#" title="Просмотреть">Просмотреть</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1996</td>
+                    <td>11.10.16 в 02:53</td>
+                    <td>13 480.00</td>
+                    <td>11</td>
+                    <td>
+                      <a class="icon print" href="#" title="Распечатать">Распечатать</a>
+                      <a class="icon pdf" href="#" title="Скачать pdf">Скачать pdf</a>
+                      <a class="icon view" href="#" title="Просмотреть">Просмотреть</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1312</td>
+                    <td>08.10.16 в 14:54</td>
+                    <td>124 560.00</td>
+                    <td>321</td>
+                    <td>
+                      <a class="icon print" href="#" title="Распечатать">Распечатать</a>
+                      <a class="icon pdf" href="#" title="Скачать pdf">Скачать pdf</a>
+                      <a class="icon view" href="#" title="Просмотреть">Просмотреть</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div id="bonus">
+              <table>
+                <thead>
+                  <th>№</th>
+                  <th>Дата</th>
+                  <th>Сумма</th>
+                  <th>Операция</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2451</td>
+                    <td>13.11.16 в 08:02</td>
+                    <td>1 720.00</td>
+                    <td>Начисление</td>
+                  </tr>
+                  <tr>
+                    <td>2120</td>
+                    <td>24.10.16 в 06:06</td>
+                    <td>8 645.00</td>
+                    <td class="text-danger">Списание</td>
+                  </tr>
+                  <tr>
+                    <td>1996</td>
+                    <td>11.10.16 в 02:53</td>
+                    <td>1 348.00</td>
+                    <td>Начисление</td>
+                  </tr>
+                  <tr>
+                    <td>1312</td>
+                    <td>08.10.16 в 14:54</td>
+                    <td>1 2456.00</td>
+                    <td>Начисление</td>
+                  </tr>
+                  <tr>
+                    <td>2451</td>
+                    <td>13.11.16 в 08:02</td>
+                    <td>1 720.00</td>
+                    <td>Начисление</td>
+                  </tr>
+                  <tr>
+                    <td>2120</td>
+                    <td>24.10.16 в 06:06</td>
+                    <td>8 645.00</td>
+                    <td class="text-danger">Списание</td>
+                  </tr>
+                  <tr>
+                    <td>1996</td>
+                    <td>11.10.16 в 02:53</td>
+                    <td>1 348.00</td>
+                    <td>Начисление</td>
+                  </tr>
+                  <tr>
+                    <td>1312</td>
+                    <td>08.10.16 в 14:54</td>
+                    <td>1 2456.00</td>
+                    <td>Начисление</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div id="video">
+              
+            </div>
+          </section>
+
+        </div> <!-- .right-column -->
+
+      </div> <!-- .row -->
+      
+    </main>
+    
+    <script>
+      var content = components.import.querySelector('footer');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
+  </body>
+</html>

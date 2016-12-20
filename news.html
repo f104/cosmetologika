@@ -10,197 +10,153 @@
     </script>
   </head>
   <body>
-    
+
     <script>
       var content = components.import.querySelector('header');
       document.body.appendChild(content.cloneNode(true));
     </script>
-    
+
     <script>
       var content = components.import.querySelector('#comp_searchbar');
       document.body.appendChild(content.cloneNode(true));
     </script>
-    
+
     <main>
-    
+
       <ol class="breadcrumb">
         <li><a href="#">Главная</a></li>
         <li class="active">Новости</li>
       </ol>
-      
+
       <div class="column-wrapper">
-      
+
         <div class="left-column">
           <script>
             var content = components.import.querySelector('#comp_left');
             document.querySelector('main .left-column').appendChild(content.cloneNode(true));
           </script>
+          
+          <section>
+            <h3>Товар дня:</h3>
+            <script>
+              var content = components.import.querySelector('#comp_goods_of_day');
+              document.querySelector('main .left-column section').appendChild(content.cloneNode(true));
+            </script>
+          </section>
         </div> <!-- .left-column -->
 
         <div class="right-column">
 
-          <div class="page-header">
-            <h1>Новости</h1>
-          </div>
-          
-          <div class="news-list">
-            
-            <div class="news-item">
-              <div class="news-item-image">
-                <a href="#"><img src="assets/images/news/1.jpg" alt="Уникальная процедура восстановления волос Barex"></a>
-              </div>
-              <div class="news-item-content">
-                <h3><a href="#">Уникальная процедура восстановления волос Barex</a></h3>
-                <p>Очень хочется отрастить волосы, но они постоянно секутся и ломаются? Или волосы очень редкие и тонкие, так что прическа не имеет нужного объема? А может ваши волосы выглядят тусклыми и сухими? Если для вас актуальные эти проблемы, то ламинирование волос может стать вашим спасением.</p>
-                <a href="#" class="btn btn-default">Читать дальше</a> 
-                <span class="icon favorites-count myfavorite" title="Количество пользователей, добавивших в избранное">19</span>
-                <span class="icon comments-count" title="Количество комментариев">36</span>
-              </div>
+          <section>
+
+            <div class="page-header">
+              <h1>Новости</h1>
             </div>
-            
-            <div class="news-item">
-              <div class="news-item-image">
-                <a href="#"><img src="assets/images/news/2.jpg" alt="Уход за руками в зимние месяцы"></a>
+
+            <div class="news-list">
+
+              <div class="news-item">
+                <div class="news-item-image">
+                  <a href="#"><img src="assets/images/news/1.jpg" alt="Уникальная процедура восстановления волос Barex"></a>
+                </div>
+                <div class="news-item-content">
+                  <h3><a href="#">Уникальная процедура восстановления волос Barex</a></h3>
+                  <p>Очень хочется отрастить волосы, но они постоянно секутся и ломаются? Или волосы очень редкие и тонкие, так что прическа не имеет нужного объема? А может ваши волосы выглядят тусклыми и сухими? Если для вас актуальные эти проблемы, то ламинирование волос может стать вашим спасением.</p>
+                  <a href="#" class="btn btn-default">Читать дальше</a> 
+                  <span class="icon favorites-count myfavorite" title="Количество пользователей, добавивших в избранное">19</span>
+                  <span class="icon comments-count" title="Количество комментариев">36</span>
+                </div>
               </div>
-              <div class="news-item-content">
-                <h3><a href="#">Уход за руками в зимние месяцы</a></h3>
-                <p>Зимой, в связи с сезонным авитаминозом и особенностями климата, кожа рук нуждается в более тщательном уходе и увлажнении. Главными задачами многих девушек становится - не потеряться в многообразии предлагаемых косметических препаратов, а также выбрать для себя наиболее подходящее средство.</p>
-                <a href="#" class="btn btn-default">Читать дальше</a> 
-                <span class="icon favorites-count" title="Количество пользователей, добавивших в избранное">24</span>
-                <span class="icon comments-count" title="Количество комментариев">73</span>
+
+              <div class="news-item">
+                <div class="news-item-image">
+                  <a href="#"><img src="assets/images/news/2.jpg" alt="Уход за руками в зимние месяцы"></a>
+                </div>
+                <div class="news-item-content">
+                  <h3><a href="#">Уход за руками в зимние месяцы</a></h3>
+                  <p>Зимой, в связи с сезонным авитаминозом и особенностями климата, кожа рук нуждается в более тщательном уходе и увлажнении. Главными задачами многих девушек становится - не потеряться в многообразии предлагаемых косметических препаратов, а также выбрать для себя наиболее подходящее средство.</p>
+                  <a href="#" class="btn btn-default">Читать дальше</a> 
+                  <span class="icon favorites-count" title="Количество пользователей, добавивших в избранное">24</span>
+                  <span class="icon comments-count" title="Количество комментариев">73</span>
+                </div>
               </div>
+
+              <div class="news-item">
+                <div class="news-item-image">
+                  <a href="#"><img src="assets/images/news/3.jpg" alt="Medical Collagene 3D: косметика на основе нативного трехспирального коллагена"></a>
+                </div>
+                <div class="news-item-content">
+                  <h3><a href="#">Medical Collagene 3D: косметика на основе нативного трехспирального коллагена</a></h3>
+                  <p>Специалисты и сотрудники бренда Medical Collagene 3D не обещают вечной молодости никому - к сожалению, в мире все проходящее, и глупо было бы это отрицать. Однако поддерживать свою кожу в безупречном состоянии вполне реально, длагодаря уникальным разработкам и технологиям компании.</p>
+                  <a href="#" class="btn btn-default">Читать дальше</a> 
+                  <span class="icon favorites-count" title="Количество пользователей, добавивших в избранное">15</span>
+                  <span class="icon comments-count" title="Количество комментариев">26</span>
+                </div>
+              </div>
+
+              <div class="news-item">
+                <div class="news-item-image">
+                  <a href="#"><img src="assets/images/news/4.jpg" alt="Ножки без мозолей и натоптышей"></a>
+                </div>
+                <div class="news-item-content">
+                  <h3><a href="#">Ножки без мозолей и натоптышей</a></h3>
+                  <p>Красивые пальчики на ногах - это, как правило, результат грамотного и регулярного ухода за ними. Обувь всегда являлась деформирующим фактором. Современная косметология владеет обширным комплексом средств, которые используются для лечения натоптышей и мозолей и позволяют сделать уход за ногами приятным и эффективным.</p>
+                  <a href="#" class="btn btn-default">Читать дальше</a> 
+                  <span class="icon favorites-count myfavorite" title="Количество пользователей, добавивших в избранное">11</span>
+                  <span class="icon comments-count" title="Количество комментариев">44</span>
+                </div>
+              </div>
+
+              <div class="news-item">
+                <div class="news-item-image">
+                  <a href="#"><img src="assets/images/news/5.jpg" alt="Натуральный дезодорант - миф или реальность?"></a>
+                </div>
+                <div class="news-item-content">
+                  <h3><a href="#">Натуральный дезодорант - миф или реальность?</a></h3>
+                  <p>По данным социологических служб от постоянно мокрых подмышек, ладоней и стоп страдает 2,3 процента населения. По некоторым данным, только в Москве с повышенным потоотделением знакомы более 300 тысяч человек! И в холодное время года потоотделение не уменьшается - метро, автобус и присутствие в них в верхней одежде активизируют потоотделение.</p>
+                  <a href="#" class="btn btn-default">Читать дальше</a> 
+                  <span class="icon favorites-count myfavorite" title="Количество пользователей, добавивших в избранное">47</span>
+                  <span class="icon comments-count" title="Количество комментариев">118</span>
+                </div>
+              </div>
+
+              <div class="news-item">
+                <div class="news-item-image">
+                  <a href="#"><img src="assets/images/news/6.jpg" alt="Чистка лица в домашних условиях"></a>
+                </div>
+                <div class="news-item-content">
+                  <h3><a href="#">Чистка лица в домашних условиях</a></h3>
+                  <p>Сухой летний воздух редко бывает чистым, особенно в мегаполисах. Мельчайшие частички пыли, попадая на лицо, забивают поры, мешая коже дышать и часто вызывая воспаления. Неэстетичные высыпания подталкивают нас к использованию пудры и тонального крема, но эти средства лишь усугубляют ситуацию.</p>
+                  <a href="#" class="btn btn-default">Читать дальше</a> 
+                  <span class="icon favorites-count" title="Количество пользователей, добавивших в избранное">51</span>
+                  <span class="icon comments-count" title="Количество комментариев">83</span>
+                </div>
+              </div>
+
             </div>
-            
-            <div class="news-item">
-              <div class="news-item-image">
-                <a href="#"><img src="assets/images/news/3.jpg" alt="Medical Collagene 3D: косметика на основе нативного трехспирального коллагена"></a>
-              </div>
-              <div class="news-item-content">
-                <h3><a href="#">Medical Collagene 3D: косметика на основе нативного трехспирального коллагена</a></h3>
-                <p>Специалисты и сотрудники бренда Medical Collagene 3D не обещают вечной молодости никому - к сожалению, в мире все проходящее, и глупо было бы это отрицать. Однако поддерживать свою кожу в безупречном состоянии вполне реально, длагодаря уникальным разработкам и технологиям компании.</p>
-                <a href="#" class="btn btn-default">Читать дальше</a> 
-                <span class="icon favorites-count" title="Количество пользователей, добавивших в избранное">15</span>
-                <span class="icon comments-count" title="Количество комментариев">26</span>
-              </div>
-            </div>
-            
-            <div class="news-item">
-              <div class="news-item-image">
-                <a href="#"><img src="assets/images/news/4.jpg" alt="Ножки без мозолей и натоптышей"></a>
-              </div>
-              <div class="news-item-content">
-                <h3><a href="#">Ножки без мозолей и натоптышей</a></h3>
-                <p>Красивые пальчики на ногах - это, как правило, результат грамотного и регулярного ухода за ними. Обувь всегда являлась деформирующим фактором. Современная косметология владеет обширным комплексом средств, которые используются для лечения натоптышей и мозолей и позволяют сделать уход за ногами приятным и эффективным.</p>
-                <a href="#" class="btn btn-default">Читать дальше</a> 
-                <span class="icon favorites-count myfavorite" title="Количество пользователей, добавивших в избранное">11</span>
-                <span class="icon comments-count" title="Количество комментариев">44</span>
-              </div>
-            </div>
-            
-            <div class="news-item">
-              <div class="news-item-image">
-                <a href="#"><img src="assets/images/news/5.jpg" alt="Натуральный дезодорант - миф или реальность?"></a>
-              </div>
-              <div class="news-item-content">
-                <h3><a href="#">Натуральный дезодорант - миф или реальность?</a></h3>
-                <p>По данным социологических служб от постоянно мокрых подмышек, ладоней и стоп страдает 2,3 процента населения. По некоторым данным, только в Москве с повышенным потоотделением знакомы более 300 тысяч человек! И в холодное время года потоотделение не уменьшается - метро, автобус и присутствие в них в верхней одежде активизируют потоотделение.</p>
-                <a href="#" class="btn btn-default">Читать дальше</a> 
-                <span class="icon favorites-count myfavorite" title="Количество пользователей, добавивших в избранное">47</span>
-                <span class="icon comments-count" title="Количество комментариев">118</span>
-              </div>
-            </div>
-            
-            <div class="news-item">
-              <div class="news-item-image">
-                <a href="#"><img src="assets/images/news/6.jpg" alt="Чистка лица в домашних условиях"></a>
-              </div>
-              <div class="news-item-content">
-                <h3><a href="#">Чистка лица в домашних условиях</a></h3>
-                <p>Сухой летний воздух редко бывает чистым, особенно в мегаполисах. Мельчайшие частички пыли, попадая на лицо, забивают поры, мешая коже дышать и часто вызывая воспаления. Неэстетичные высыпания подталкивают нас к использованию пудры и тонального крема, но эти средства лишь усугубляют ситуацию.</p>
-                <a href="#" class="btn btn-default">Читать дальше</a> 
-                <span class="icon favorites-count" title="Количество пользователей, добавивших в избранное">51</span>
-                <span class="icon comments-count" title="Количество комментариев">83</span>
-              </div>
-            </div>
-            
-          </div>
-          
-          <ul class="pagination">
-            <li><a href="#">Назад</a></li>
-            <li><a href="#">1</a></li>
-            <li class="active">2</li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">Вперед</a></li>
-          </ul>
+
+            <ul class="pagination">
+              <li><a href="#">Назад</a></li>
+              <li><a href="#">1</a></li>
+              <li class="active">2</li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">Вперед</a></li>
+            </ul>
+
+          </section>
 
         </div> <!-- .right-column -->
 
       </div> <!-- .row -->
-      
+
     </main>
-    
-    <footer>
-      <div class="footer-one">
-        <div class="container-fluid">
-          <div class="footer-one-wrapper">
-            <div class="footer-about">
-              <a href="#"><img src="assets/images/logo-small.png" alt="cosmetologika"></a>
-              Судья, попечитель богоугодных заведений, смотритель училищь и почтмейстер уходят.
-            </div>
-            <div class="footer-contacts">
-              <h3>Контакты</h3>
-              <p>+7 (831) 550 45 25<br>
-                <a href="mailto:hello@kosmetologika.ru">hello@kosmetologika.ru</a></p>
-            </div>
-            <div class="footer-menu">
-              <h3>Каталог</h3>
-              <menu>
-                <li><a href="#">Омоложение</a></li>
-                <li><a href="#">Волосы</a></li>
-                <li><a href="#">Макияж</a></li>
-                <li><a href="#">Для мужчин</a></li>
-                <li><a href="#">Уход за кожей</a></li>
-                <li><a href="#">Аксессуары</a></li>
-                <li><a href="#">Ногти</a></li>
-                <li><a href="#">Тело</a></li>
-                <li><a href="#">Расходники</a></li>
-              </menu>
-            </div>
-            <div class="footer-payments">
-              <h3>Способы оплаты</h3>
-              <ul>
-                <li class="visa">visa</li>
-                <li class="mc">mc</li>
-                <li class="wm">wm</li>
-                <li class="qiwi">qiwi</li>
-                <li class="ym">ym</li>
-                <li class="alfa">alfa</li>
-                <li class="sber">sber</li>
-                <li class="pp">pp</li>
-                <li class="maestro">maestro</li>
-                <li class="cirrus">cirrus</li>
-              </ul>
-              <div class="footer-madein">
-                Made in&nbsp;&nbsp;<a href="#"><img src="assets/images/riverstart.png" alt="riverstart"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer-two">
-        <div class="container-fluid">
-          <p>ООО "Косметологика &copy; 2016</p>
-          <menu>
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">О компании</a></li>
-            <li><a href="#">Оплата и доставка</a></li>
-          </menu>
-        </div>
-      </div>
-      
-    </footer>
-    
+
+    <script>
+      var content = components.import.querySelector('footer');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+
   </body>
 </html>

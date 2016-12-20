@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>404</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="import" href="components.html">
+    <script>
+      var components = document.querySelector('link[rel=import]');
+    </script>
+  </head>
+  <body>
+
+    <script>
+      var content = components.import.querySelector('header');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+
+    <script>
+      var content = components.import.querySelector('#comp_searchbar');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+
+    <main>
+
+      <div class="page404">
+        <div>
+          <h1>404</h1>
+          <h3>Запрашиваемая вами страница не существует</h3>
+          <p>Приносим извинения за неудобства</p>
+          <a class="btn btn-primary">Вернуться на главную</a>
+        </div>
+      </div>
+
+    </main>
+
+    <script>
+      var content = components.import.querySelector('footer');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Каталог</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="import" href="components.html">
+    <script>
+      var components = document.querySelector('link[rel=import]');
+    </script>
+  </head>
+  <body>
+    
+    <script>
+      var content = components.import.querySelector('header');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
+    <script>
+      var content = components.import.querySelector('#comp_searchbar');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
+    <main>
+    
+      <ol class="breadcrumb">
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Каталог</a></li>
+        <li><a href="#">Омоложение</a></li>
+        <li class="active">Мезопрепараты</li>
+      </ol>
+      
+      <div class="column-wrapper">
+      
+        <div class="left-column">
+          <script>
+            var content = components.import.querySelector('#comp_left_menu');
+            document.querySelector('main .left-column').appendChild(content.cloneNode(true));
+          </script>
+          
+<!--          <div class="filters">
+            <form>
+              <h4>Цена</h4>
+              <input type="range">
+              <h4>Бренды</h4>
+              <label><input type="checkbox" checked> Cytolife</label>
+              <label><input type="checkbox" checked> G Derm</label>
+              <label><input type="checkbox"> Kosmoteros Medical</label>
+              <label><input type="checkbox"> La beaute Medicale</label>
+              <label><input type="checkbox" checked> Mezolax</label>
+              <label><input type="checkbox" checked> Repleri</label>
+              <label><input type="checkbox"> Swiss Color</label>
+            </form>
+          </div>-->
+
+          <section class="reviews-slider">
+            <h3>Отзывы</h3>
+          </section>
+          <script>
+            var content = components.import.querySelector('#comp_reviews');
+            document.querySelector('main .left-column .reviews-slider').appendChild(content.cloneNode(true));
+          </script>          
+          
+          <script>
+            var content = components.import.querySelector('#comp_left_subscribe');
+            document.querySelector('main .left-column').appendChild(content.cloneNode(true));
+            var content = components.import.querySelector('#comp_left_banner');
+            document.querySelector('main .left-column').appendChild(content.cloneNode(true));
+          </script>
+        </div> <!-- .left-column -->
+
+        <div class="right-column">
+          
+          <section>
+          
+          <h1>Мезопрепараты</h1>
+          
+          <div class="goods-list-options">
+            <div>
+              Сортировка:&nbsp;&nbsp;
+              <select>
+                <option>По популярности</option>
+                <option>Сначала дешевые</option>
+                <option>Сначала дорогие</option>
+              </select>
+              <span>Показывать по:</span>
+              <ul class="onpage">
+                <li class="active">20</li>
+                <li><a href="#">40</a></li>
+                <li><a href="#">120</a></li>
+              </ul>
+            </div>
+            <div>
+              <a href="#" class="grid-options grid" data-list="grid" title="Сетка">Сетка</a>
+              <a href="#" class="grid-options full active" data-list="full" title="Полный список">Полный список</a>
+              <a href="#" class="grid-options short" data-list="short" title="Краткий список">Краткий список</a>
+            </div>
+          </div>
+
+          <div class="goods-list full">
+
+            <div class="goods-list-item">
+              <div class="image">
+                <a href="#"><img src="assets/images/goods/1.jpg" alt="good1"></a>
+                <div class="discount">-20%</div>
+              </div>
+              <div class="content">
+                <h3><a href="#">CYTOLIFE HYALURONIC ACID&nbsp;HA 1,2%</a></h3>
+                <p class="description">Судья, попечитель богоугодных заведений, смотритель училищ и почтмейстер уходят и в дверях сталкиваются с возвращающимся квартальным.</p>
+                <p class="artikul">Артикул: 827.441.23.69</p>
+              </div>
+              <div class="footer">
+                <p class="price"><span class="cost">3 199 руб</span> <span class="cost-old">3 999 руб</span></p>
+                <div class="buttons">
+                  <form><button class="btn btn-primary">В корзину</button></form>
+                  <div class="icons">
+                    <a href="#" class="icon compare" title="Сравнить">Сравнить</a>
+                    <a href="#" class="icon favorite" title="В избранное">В избранное</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="goods-list-item">
+              <div class="image">
+                <a href="#"><img src="assets/images/goods/2.jpg" alt="good2"></a>
+              </div>
+              <div class="content">
+                <h3><a href="#">CYTOLIFE AQUA+ MESOLIFT&nbsp;0,9%</a></h3>
+                <p class="description">Какое колпаки! Больным велено габерсуп давать, а у меня по всем коридорам несет такая капуста, что береги только нос.	Вы, как я вижу, не охотник до сигарок.</p>
+                <p class="artikul">Артикул: 13.185.23.65</p>
+              </div>
+              <div class="footer">
+                <p class="price"><span class="cost">2 550 руб</span></p>
+                <div class="buttons">
+                  <form><button class="btn btn-primary">В корзину</button></form>
+                  <div class="icons">
+                    <a href="#" class="icon compare active" title="Сравнить">Сравнить</a>
+                    <a href="#" class="icon favorite" title="В избранное">В избранное</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="goods-list-item">
+              <div class="image">
+                <a href="#"><img src="assets/images/goods/4.jpg" alt="good4"></a>
+              </div>
+              <div class="content">
+                <h3><a href="#">MezoLax HSR (1x5ml)</a></h3>
+                <p class="description">И вдруг Раскольникову ясно припомнилась вся сцена третьего дня под воротами; он сообразил, что кроме дворников там стояло тогда еще несколько человек.</p>
+                <p class="artikul">Артикул: 115.52.96.147</p>
+              </div>
+              <div class="footer">
+                <p class="price"><span class="cost">1 189 руб</span></p>
+                <div class="buttons">
+                  <form><button class="btn btn-primary">В корзину</button></form>
+                  <div class="icons">
+                    <a href="#" class="icon compare" title="Сравнить">Сравнить</a>
+                    <a href="#" class="icon favorite" title="В избранное">В избранное</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="goods-list-item">
+              <div class="image">
+                <a href="#"><img src="assets/images/goods/3.jpg" alt="good2"></a>
+              </div>
+              <div class="content">
+                <h3><a href="#">ЛОСЬОН ДЛЯ КОЖИ АКТИВИРУЮЩИЙ «SKIN REPAIR», 200МЛ</a></h3>
+                <p class="description">И вдруг Раскольникову ясно припомнилась вся сцена третьего дня под воротами; он сообразил, что кроме дворников там стояло тогда еще несколько человек.</p>
+                <p class="artikul">Артикул: 13.185.23.65</p>
+              </div>
+              <div class="footer">
+                <p class="price"><span class="cost">1 125 руб</span></p>
+                <div class="buttons">
+                  <form><button class="btn btn-primary">В корзину</button></form>
+                  <div class="icons">
+                    <a href="#" class="icon compare" title="Сравнить">Сравнить</a>
+                    <a href="#" class="icon favorite active" title="В избранное">В избранное</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="goods-list-item">
+              <div class="image">
+                <a href="#"><img src="assets/images/goods/1.jpg" alt="good1"></a>
+              </div>
+              <div class="content">
+                <h3><a href="#">CYTOLIFE HYALURONIC ACID&nbsp;HA 1,2%</a></h3>
+                <p class="description">Судья, попечитель богоугодных заведений, смотритель училищ и почтмейстер уходят и в дверях сталкиваются с возвращающимся квартальным.</p>
+                <p class="artikul">Артикул: 827.441.23.69</p>
+              </div>
+              <div class="footer">
+                <p class="price"><span class="cost">3 199 руб</span></p>
+                <div class="buttons">
+                  <form><button class="btn btn-primary">В корзину</button></form>
+                  <div class="icons">
+                    <a href="#" class="icon compare" title="Сравнить">Сравнить</a>
+                    <a href="#" class="icon favorite" title="В избранное">В избранное</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="goods-list-item">
+              <div class="image">
+                <a href="#"><img src="assets/images/goods/2.jpg" alt="good2"></a>
+              </div>
+              <div class="content">
+                <h3><a href="#">CYTOLIFE AQUA+ MESOLIFT&nbsp;0,9%</a></h3>
+                <p class="description">Какое колпаки! Больным велено габерсуп давать, а у меня по всем коридорам несет такая капуста, что береги только нос.	Вы, как я вижу, не охотник до сигарок.</p>
+                <p class="artikul">Артикул: 13.185.23.65</p>
+              </div>
+              <div class="footer">
+                <p class="price"><span class="cost">2 550 руб</span></p>
+                <div class="buttons">
+                  <form><button class="btn btn-primary">В корзину</button></form>
+                  <div class="icons">
+                    <a href="#" class="icon compare active" title="Сравнить">Сравнить</a>
+                    <a href="#" class="icon favorite" title="В избранное">В избранное</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="goods-list-item">
+              <div class="image">
+                <a href="#"><img src="assets/images/goods/4.jpg" alt="good4"></a>
+                <div class="discount">-20%</div>
+              </div>
+              <div class="content">
+                <h3><a href="#">MezoLax HSR (1x5ml)</a></h3>
+                <p class="description">И вдруг Раскольникову ясно припомнилась вся сцена третьего дня под воротами; он сообразил, что кроме дворников там стояло тогда еще несколько человек.</p>
+                <p class="artikul">Артикул: 115.52.96.147</p>
+              </div>
+              <div class="footer">
+                <p class="price"><span class="cost">1 189 руб</span></p>
+                <div class="buttons">
+                  <form><button class="btn btn-primary">В корзину</button></form>
+                  <div class="icons">
+                    <a href="#" class="icon compare" title="Сравнить">Сравнить</a>
+                    <a href="#" class="icon favorite" title="В избранное">В избранное</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="goods-list-item">
+              <div class="image">
+                <a href="#"><img src="assets/images/goods/3.jpg" alt="good2"></a>
+              </div>
+              <div class="content">
+                <h3><a href="#">ЛОСЬОН ДЛЯ КОЖИ АКТИВИРУЮЩИЙ «SKIN REPAIR», 200МЛ</a></h3>
+                <p class="description">И вдруг Раскольникову ясно припомнилась вся сцена третьего дня под воротами; он сообразил, что кроме дворников там стояло тогда еще несколько человек.</p>
+                <p class="artikul">Артикул: 13.185.23.65</p>
+              </div>
+              <div class="footer">
+                <p class="price"><span class="cost">нет в наличии</span></p>
+                <div class="buttons">
+                  <form><button class="btn btn-primary" disabled>В корзину</button></form>
+                  <div class="icons">
+                    <a href="#" class="icon compare" title="Сравнить">Сравнить</a>
+                    <a href="#" class="icon favorite active" title="В избранное">В избранное</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <ul class="pagination">
+            <li><a href="#">Назад</a></li>
+            <li><a href="#">1</a></li>
+            <li class="active">2</li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">Вперед</a></li>
+          </ul>
+          
+          </section>
+          
+          <section class="recent-goods">
+            <h2>Вы недавно смотрели:</h2>
+            <script>
+              var content = components.import.querySelector('#comp_recent');
+              document.querySelector('.recent-goods').appendChild(content.cloneNode(true));
+            </script>
+          </section>
+          
+        </div> <!-- .right-column -->
+
+      </div> <!-- .row -->
+      
+    </main>
+    
+    <script>
+      var content = components.import.querySelector('footer');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
+  </body>
+</html>

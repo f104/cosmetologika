@@ -5,6 +5,7 @@
 
 table {
   background-color: @table-bg;
+  font-size: 12px;
 }
 caption {
   padding-top: @table-cell-padding;
@@ -14,6 +15,7 @@ caption {
 }
 th {
   text-align: left;
+  font-family: @headings-font-family;
 }
 
 
@@ -33,14 +35,15 @@ th {
         padding: @table-cell-padding;
         line-height: @line-height-base;
         vertical-align: top;
-        border-top: 1px solid @table-border-color;
+        /*border-top: 1px solid @table-border-color;*/
       }
     }
   }
   // Bottom align for column headings
   > thead > tr > th {
     vertical-align: bottom;
-    border-bottom: 2px solid @table-border-color;
+    border-bottom: 1px solid @table-border-color;
+    padding-top: 0;
   }
   // Remove top border from thead by default
   > caption + thead,

@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="assets/js/libs/slick/slick.css">
-    <link rel="stylesheet" href="assets/js/libs/slick/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/slick/slick.css">
+    <link rel="stylesheet" href="assets/css/slick/slick-theme.css">
     <link rel="stylesheet" href="assets/css/common.css">
-    <!--<link rel="stylesheet" href="assets/css/jquery.formstyler.css">-->
+    <link rel="stylesheet" href="assets/css/jquery.formstyler.css">
     <script src="assets/js/libs/jquery-2.1.4.min.js"></script>
     <script src="assets/js/libs/slick/slick.min.js"></script>
     <script src="assets/js/libs/jquery.fancybox.min.js"></script>
     <script src="assets/js/libs/jquery.hashchange.min.js"></script>
     <script src="assets/js/libs/jquery.easytabs.min.js"></script>
-    <!--<script src="assets/js/libs/jquery.formstyler.min.js"></script>-->
+    <script src="assets/js/libs/jquery.formstyler.min.js"></script>
     <script src="assets/js/common.js"></script>
   </head>
   <body>
@@ -93,7 +93,7 @@
           
           <div  id="comp_left">
             
-          <menu class="aside-menu" id="comp_menu">
+          <menu class="aside-menu" id="comp_left_menu">
             <li>
               <a href="#">Лицо</a>
               <ul>
@@ -256,25 +256,142 @@
             </li>
           </menu>
           
-          <form class="well-form">
+          <form class="well-sm-form" id="comp_left_subscribe">
             <fieldset>
               <legend>Новостная рассылка</legend>
               <div class="form-group">
                 <label for="subscribe_email">Email</label>
                 <input type="email" id="subscribe_email" value="vicpetrova@mail.ru">
               </div>
-              <button type="submit" class="btn btn-danger">Подписаться</button>
             </fieldset>
+            <button type="submit" class="btn btn-danger">Подписаться</button>
           </form>
           
-          <a href="#" class="banner"><img src="assets/images/banner.png"></a>
+          <a href="#" class="banner" id="comp_left_banner"><img src="assets/images/banner.png"></a>
           
           </div>
 
         </div> <!-- .left-column -->
 
         <div class="right-column">
+          
+          <ul class="goods-list-recent" data-slides="5" id="comp_recent">
 
+            <li>
+              <div class="image">
+                <a href="#"><img src="assets/images/goods/1.jpg" alt="good1"></a>
+                <div class="discount">-20%</div>
+              </div>
+              <h3><a href="#">CYTOLIFE HYALURONIC ACID&nbsp;HA 1,2%</a></h3>
+              <p class="price"><span class="cost">3 199 руб</span> <span class="cost-old">3 999 руб</span></p>
+            </li>
+
+            <li>
+              <div class="image">
+                <a href="#"><img src="assets/images/goods/2.jpg" alt="good2"></a>
+              </div>
+              <h3><a href="#">CYTOLIFE AQUA+ MESOLIFT&nbsp;0,9%</a></h3>
+              <p class="price"><span class="cost">2 550 руб</span></p>
+            </li>
+
+            <li>
+              <div class="image">
+                <a href="#"><img src="assets/images/goods/4.jpg" alt="good4"></a>
+              </div>
+              <h3><a href="#">MezoLax HSR (1x5ml)</a></h3>
+              <p class="price"><span class="cost">1 189 руб</span></p>
+            </li>
+
+            <li>
+              <div class="image">
+                <a href="#"><img src="assets/images/goods/3.jpg" alt="good2"></a>
+              </div>
+              <h3><a href="#">ЛОСЬОН ДЛЯ КОЖИ АКТИВИРУЮЩИЙ «SKIN REPAIR», 200МЛ</a></h3>
+              <p class="price"><span class="cost">1 125 руб</span></p>
+            </li>
+
+            <li>
+              <div class="image">
+                <a href="#"><img src="assets/images/goods/1.jpg" alt="good1"></a>
+              </div>
+              <h3><a href="#">CYTOLIFE HYALURONIC ACID&nbsp;HA 1,2%</a></h3>
+              <p class="price"><span class="cost">3 199 руб</span></p>
+            </li>
+
+            <li>
+              <div class="image">
+                <a href="#"><img src="assets/images/goods/3.jpg" alt="good2"></a>
+              </div>
+              <h3><a href="#">ЛОСЬОН ДЛЯ КОЖИ АКТИВИРУЮЩИЙ «SKIN REPAIR», 200МЛ</a></h3>
+              <p class="price"><span class="cost">1 125 руб</span></p>
+            </li>
+
+            <li>
+              <div class="image">
+                <a href="#"><img src="assets/images/goods/1.jpg" alt="good1"></a>
+              </div>
+              <h3><a href="#">CYTOLIFE HYALURONIC ACID&nbsp;HA 1,2%</a></h3>
+              <p class="price"><span class="cost">3 199 руб</span></p>
+            </li>
+
+          </ul>
+          
+          <ul class="goods-list-recent" data-slides="1" id="comp_goods_of_day">
+
+            <li>
+              <div class="image">
+                <a href="#"><img src="assets/images/goods/1.jpg" alt="good1"></a>
+                <div class="discount">-20%</div>
+              </div>
+              <h3><a href="#">CYTOLIFE HYALURONIC ACID&nbsp;HA 1,2%</a></h3>
+              <p class="price"><span class="cost">3 199 руб</span> <span class="cost-old">3 999 руб</span></p>
+            </li>
+
+            <li>
+              <div class="image">
+                <a href="#"><img src="assets/images/goods/2.jpg" alt="good2"></a>
+              </div>
+              <h3><a href="#">CYTOLIFE AQUA+ MESOLIFT&nbsp;0,9%</a></h3>
+              <p class="price"><span class="cost">2 550 руб</span></p>
+            </li>
+
+            <li>
+              <div class="image">
+                <a href="#"><img src="assets/images/goods/4.jpg" alt="good4"></a>
+              </div>
+              <h3><a href="#">MezoLax HSR (1x5ml)</a></h3>
+              <p class="price"><span class="cost">1 189 руб</span></p>
+            </li>
+
+          </ul>
+          
+          <ul class="reviews" id="comp_reviews">
+            <li>
+              <div class="reviews-user">
+                <img src="assets/images/user1.jpg" alt="user1">
+                <div><strong>Марина</strong><br>
+                  <span class="sity">Ростов-на-Дону</span></div>
+              </div>
+              <p>Он вспомнил теперь, как в Кузминском на него нашло искушение и он стал жалеть и дом, и лес, и хозяйство, и землю, и спросил себя теперь: жалеет ли он?</p>
+            </li>
+            <li>
+              <div class="reviews-user">
+                <img src="assets/images/user2.jpg" alt="user2">
+                <div><strong>Алексей</strong><br>
+                  <span class="sity">Самара</span></div>
+              </div>
+              <p>Господский дом стоял на юру, открытый всем ветрам; возвышенность, на которой он стоял, была покрыта дерном. Две-три клумбы с акацией, пять-шесть жиденьких берез, деревянная беседка и пруд довершали эту картину.</p>
+            </li>
+            <li>
+              <div class="reviews-user">
+                <img src="assets/images/user3.jpg" alt="user3">
+                <div><strong>Павел</strong><br>
+                  <span class="sity">Екатеринбург</span></div>
+              </div>
+              <p>Все эти замечания пришли мне на ум, может быть, только потому, что я знал некоторые подробности его жизни, и, может быть, на другого вид его произвел бы совершенно различное впечатление.</p>
+            </li>
+          </ul>
+          
         </div> <!-- .right-column -->
 
       </div> <!-- .row -->
@@ -293,6 +410,11 @@
               <h3>Контакты</h3>
               <p>+7 (831) 550 45 25<br>
                 <a href="mailto:hello@kosmetologika.ru">hello@kosmetologika.ru</a></p>
+              <div class="social-media">
+                <a href="#" class="tw">Twitter</a>
+                <a href="#" class="fb">Facebook</a>
+                <a href="#" class="gp">Google+</a>
+              </div>
             </div>
             <div class="footer-menu">
               <h3>Каталог</h3>

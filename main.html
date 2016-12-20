@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Главная</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="import" href="components.html">
+    <script>
+      var components = document.querySelector('link[rel=import]');
+    </script>
+  </head>
+  <body>
+    
+    <script>
+      var content = components.import.querySelector('header');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
+    <script>
+      var content = components.import.querySelector('#comp_searchbar');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
+    <main>
+    
+      <ol class="breadcrumb">
+        <li class="active">Главная</li>
+      </ol>
+      
+      <div class="column-wrapper">
+      
+        <div class="left-column">
+          <script>
+            var content = components.import.querySelector('#comp_left');
+            document.querySelector('main .left-column').appendChild(content.cloneNode(true));
+          </script>
+        </div> <!-- .left-column -->
+
+        <div class="right-column">
+          
+          <section class="big-slider">
+            <ul>
+              <li><a href="#"><img src="assets/images/slider1.jpg" alt="slider1"></a></li>
+              <li><a href="#"><img src="assets/images/slider2.jpg" alt="slider2"></a></li>
+              <li><a href="#"><img src="assets/images/slider3.jpg" alt="slider3"></a></li>
+              <li><a href="#"><img src="assets/images/slider4.jpg" alt="slider4"></a></li>
+            </ul>
+          </section>
+          
+          <section class="recent-goods">
+            <h2>Хиты продаж</h2>
+          </section>
+          <script>
+            var content = components.import.querySelector('#comp_recent');
+            document.querySelector('.recent-goods').appendChild(content.cloneNode(true));
+          </script>
+          
+          <section class="reviews-wrapper">
+            <h2>Отзывы</h2>
+            <script>
+              var content = components.import.querySelector('#comp_reviews');
+              document.querySelector('main .right-column .reviews-wrapper').appendChild(content.cloneNode(true));
+            </script>          
+          </section>
+
+
+        </div> <!-- .right-column -->
+
+      </div> <!-- .row -->
+      
+    </main>
+    
+    <script>
+      var content = components.import.querySelector('footer');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
+  </body>
+</html>
