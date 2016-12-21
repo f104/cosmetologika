@@ -48,7 +48,13 @@ $(document).ready(function () {
     });
   });
   
-  $('select, input[type=file]').styler();
+  $('.order .input-wrapper input[type=radio]').change(function(e){
+    var $parent = $(this).parents('.radio');
+    $parent.addClass('checked');
+    $parent.siblings('.checked').removeClass('checked');
+  });
+  
+  $('select, input[type=file], input[type=number], input[type=radio]').styler();
   
   $('.js-tab-container').easytabs();
   

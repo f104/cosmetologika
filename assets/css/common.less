@@ -67,7 +67,6 @@ ul {
 }
 table {
   .table;
-  .table-striped;
 }
 section {
   margin-bottom: 50px;
@@ -608,6 +607,9 @@ a.icon {
   height: 18px;
   margin: 0 5px;
   background: url('@{sprite}') no-repeat;
+  &:hover {
+    opacity: .8;
+  }
   &.compare {
     background-position: 0 -80px;
     &.active {
@@ -623,6 +625,11 @@ a.icon {
   &.print { background-position: 0 -130px; }
   &.pdf { background-position: 0 -150px; }
   &.view { background-position: 0 -170px; }
+  &.remove {
+    width: 14px; height: 14px;
+    margin: 0;
+    background-position: -80px 0;
+  }
 }
 
 /* основное меню в левой колонке */
@@ -825,6 +832,7 @@ a.icon {
 }
 
 @import "goods.less";
+@import "cart.less";
 
 /* review */
 .reviews {
