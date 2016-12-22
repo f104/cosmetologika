@@ -310,19 +310,33 @@
 .related-goods {
   margin-bottom: 30px;
 }
+.recent-goods {
+  h2 {
+    margin-bottom: 40px;
+  }
+}
 .goods-list-recent {
   .list-unstyled;
+  margin-bottom: 0;
   max-width: 890px;
   padding: 0 45px;
     li {
-      margin: 0 15px;
+      margin: 0 5px;
       text-align: center;
-      img {
-        width: 130px;
+      .image {
+        position: relative;
+        padding: 10px 10px 0;
+        img {
+          .img-responsive;
+        }
       }
       h3 {
         font-size: 12px;
         margin: 20px 0 12px;
+        padding: 0 10px;
+      }
+      p {
+        padding: 0 10px;
       }
       .cost {
         font-size: 14px;
