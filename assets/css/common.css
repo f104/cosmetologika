@@ -2506,7 +2506,8 @@ label {
   color: #808186;
   display: inline-block;
   max-width: 100%;
-  margin-bottom: 1px
+  /*margin-bottom: 1px;*/
+  line-height: 20px
   /*font-weight: bold;*/
 }
 input[type="search"] {
@@ -2904,6 +2905,7 @@ select[multiple].input-lg {
   margin-bottom: 10px;
   color: #666977;
   font-size: 11px;
+  line-height: 15px;
 }
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -7918,10 +7920,10 @@ a.icon.remove {
   bottom: 16px;
   width: 11px;
   height: 6px;
-  background: url('img/sprite.png') -13px -70px no-repeat;
+  background: url('img/sprite.png') -25px -70px no-repeat;
 }
 .aside-menu > li > a.opened::after {
-  background-position: -25px -70px;
+  background-position: -13px -70px;
 }
 .aside-menu > li:first-child > a {
   padding-top: 0;
@@ -8154,6 +8156,103 @@ a.icon.remove {
   opacity: 0.7;
   filter: alpha(opacity=70);
 }
+section.login {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 80px 10px 0;
+  margin-bottom: 35px;
+}
+section.login form {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 50px;
+  min-height: 20px;
+  padding: 28px;
+  margin-bottom: 50px;
+  background-color: transparent;
+  border: 1px solid #ebeff0;
+  border-radius: 2px;
+  /*.box-shadow(inset 0 1px 1px rgba(0,0,0,.05));*/
+  padding: 45px 48px;
+}
+section.login form blockquote {
+  border-color: #ddd;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+section.login form input {
+  display: block;
+  width: 100%;
+  height: 36px;
+  padding: 8px 20px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #252a3d;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  font-size: 12px;
+}
+section.login form input:focus {
+  border-color: #252a3d;
+  outline: 0
+  /*.box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px @{color-rgba}");*/
+}
+section.login form input::-moz-placeholder {
+  color: #666977;
+  opacity: 1;
+}
+section.login form input:-ms-input-placeholder {
+  color: #666977;
+}
+section.login form input::-webkit-input-placeholder {
+  color: #666977;
+}
+section.login form input::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+section.login form input[disabled],
+section.login form input[readonly],
+fieldset[disabled] section.login form input {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+section.login form input[disabled],
+fieldset[disabled] section.login form input {
+  cursor: not-allowed;
+}
+textareasection.login form input {
+  height: auto;
+}
+section.login form fieldset {
+  margin-bottom: 5px;
+}
+section.login form fieldset.social {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+section.login form fieldset.social ul {
+  margin-bottom: 13px;
+}
+section.login form fieldset.social .help-block {
+  line-height: 13px;
+  margin-bottom: 0;
+}
 .user-tabs > div {
   padding-top: 40px;
 }
@@ -8243,7 +8342,6 @@ fieldset[disabled] a.user-tabs #profile .avatar a {
 .user-tabs #profile .social p.help-block {
   font-size: 85%;
   color: #777777;
-  line-height: 14px;
 }
 .user-tabs #orders table td,
 .user-tabs #orders table th {
@@ -8947,6 +9045,7 @@ fieldset[disabled] a.user-tabs #profile .avatar a {
   content: none;
 }
 .reviews li .reviews-user {
+  color: #252a3d;
   margin-bottom: 10px;
 }
 .reviews li .reviews-user > * {

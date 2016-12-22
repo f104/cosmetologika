@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="import" href="components.html">
+    <script>
+      var components = document.querySelector('link[rel=import]');
+    </script>
+  </head>
+  <body>
+
+    <script>
+      var content = components.import.querySelector('header');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+
+    <main>
+
+      <section class="login">
+        <form>
+          <fieldset>
+            <legend>Авторизация</legend>
+            <div class="form-group">
+              <label for="login">Логин</label>
+              <input type="text" name="login" id="login" value="">
+              <p class="help-block">Укажите логин или email, использованный при регистрации</p>
+            </div>
+            <div class="form-group">
+              <label for="password">Пароль</label>
+              <input type="password" name="password" id="password" value="">
+              <p class="help-block">Если вы не помните свой пароль, то просто оставьте это поле пустым и вы получите новый, вместе со ссылкой на активацию</p>
+            </div>
+          </fieldset>
+          <button type="submit" class="btn btn-primary">Войти</button>
+          <fieldset class="social">
+            <legend>Социальные сети</legend>
+            <ul class="social-login">
+              <li><a href="#" class="vk">Вконтакте</a></li>
+              <li><a href="#" class="facebook">Facebook</a></li>
+              <li><a href="#" class="twitter">Twitter</a></li>
+              <li><a href="#" class="google">Google Plus</a></li>
+              <li><a href="#" class="yandex">Яндекс</a></li>
+            </ul>
+            <p class="help-block">Вы можете использовать быстрый вход через социальные сети, при условии, что вы уже зарегистрировались через почту и привязали какой-то из сервисов к своей учетной записи.</p>
+          </fieldset>
+        </form>
+        <form>
+          <fieldset>
+            <legend>Регистрация</legend>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" value="">
+              <p class="help-block">На указанный email придет письмо со ссылкой для активации</p>
+            </div>
+            <div class="form-group">
+              <label for="password_reg">Пароль</label>
+              <input type="password" name="password" id="password_reg" value="">
+              <p class="help-block">Вы можете указать свой пароль или оставить это поле пустым, и тогда он будет сгенерирован автоматически</p>
+            </div>
+            <div class="form-group">
+              <label for="login_reg">Логин</label>
+              <input type="text" name="login" id="login_reg" value="">
+              <p class="help-block">Вы можете указать отдельный логин, чтобы не использовать email для входа</p>
+            </div>
+            <div class="form-group">
+              <label for="name">Имя</label>
+              <input type="text" name="name" id="name" value="">
+              <p class="help-block">Ваше имя (будет отображаться на сайте)</p>
+            </div>
+          </fieldset>
+          <button type="submit" class="btn btn-success">Зарегистрироваться</button>
+        </form>
+      </section>
+      
+    </main>
+
+    <script>
+      var content = components.import.querySelector('footer');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+
+  </body>
+</html>

@@ -14,6 +14,8 @@
 /* Arrows */
 .slick-prev,
 .slick-next {
+  -webkit-transition: initial;
+          transition: initial;
   position: absolute;
   display: block;
   height: 23px;
