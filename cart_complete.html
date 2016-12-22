@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Корзина</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="import" href="components.html">
+    <script>
+      var components = document.querySelector('link[rel=import]');
+    </script>
+  </head>
+  <body>
+
+    <script>
+      var content = components.import.querySelector('header');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+
+    <script>
+      var content = components.import.querySelector('#comp_searchbar');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+
+    <main>
+
+      <ol class="breadcrumb">
+        <li><a href="#">Главная</a></li>
+        <li class="active">Корзина</li>
+      </ol>
+      
+      <div class="order-complete-row-wrapper">
+        <div class="left-column">
+          
+          <div class="cart">
+          
+            <h2>Корзина</h2>
+
+            <table class="cart">
+            <thead>
+              <tr>
+                <th colspan="2">Товар</th>
+                <th>Цена</th>
+                <th>Количество</th>
+                <th class="total-cost">Сумма</th>
+                <!--<th>&nbsp;</th>-->            
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="image"><a href="#"><img src="assets/images/goods/1.jpg" alt="goods1"></a></td>
+                <td class="name"><a href="#">CYTOLIFE HYALURONIC ACID HA 1,2%</a></td>
+                <td class="price">3 199 руб</td>
+                <td>4</td>
+                <td class="total-cost">12 769 руб</td>
+                <!--<td><a class="icon remove" title="Удалить" href="#">Удалить</a></td>-->
+              </tr>
+              <tr>
+                <td class="image"><a href="#"><img src="assets/images/goods/2.jpg" alt="goods2"></a></td>
+                <td class="name"><a href="#">KOSMO-AGE</a></td>
+                <td class="price">1 470 руб</td>
+                <td>18</td>
+                <td class="total-cost">26 460 руб</td>
+                <!--<td><a class="icon remove" title="Удалить" href="#">Удалить</a></td>-->
+              </tr>
+              <tr>
+                <td class="image"><a href="#"><img src="assets/images/goods/3.jpg" alt="goods3"></a></td>
+                <td class="name"><a href="#">CYTOLIFE REMODULATOR 1,1%+Zn</a></td>
+                <td class="price">2 840 руб</td>
+                <td>6</td>
+                <td class="total-cost">17 040 руб</td>
+                <!--<td><a class="icon remove" title="Удалить" href="#">Удалить</a></td>-->
+              </tr>
+              <tr>
+                <td class="image"><a href="#"><img src="assets/images/goods/4.jpg" alt="goods4"></a></td>
+                <td class="name"><a href="#">Veluderm Botulopeptide</a></td>
+                <td class="price">2 890 руб</td>
+                <td>3</td>
+                <td class="total-cost">8 697 руб</td>
+                <!--<td><a class="icon remove" title="Удалить" href="#">Удалить</a></td>-->
+              </tr>
+              <tr>
+                <td class="image"><a href="#"><img src="assets/images/goods/1.jpg" alt="goods1"></a></td>
+                <td class="name"><a href="#">CYTOLIFE HYALURONIC ACID HA 1,2%</a></td>
+                <td class="price">3 199 руб</td>
+                <td>4</td>
+                <td class="total-cost">12 769 руб</td>
+                <!--<td><a class="icon remove" title="Удалить" href="#">Удалить</a></td>-->
+              </tr>
+              <tr>
+                <td class="image"><a href="#"><img src="assets/images/goods/2.jpg" alt="goods2"></a></td>
+                <td class="name"><a href="#">KOSMO-AGE</a></td>
+                <td class="price">1 470 руб</td>
+                <td>18</td>
+                <td class="total-cost">26 460 руб</td>
+                <!--<td><a class="icon remove" title="Удалить" href="#">Удалить</a></td>-->
+              </tr>
+              <tr>
+                <td class="image"><a href="#"><img src="assets/images/goods/3.jpg" alt="goods3"></a></td>
+                <td class="name"><a href="#">CYTOLIFE REMODULATOR 1,1%+Zn</a></td>
+                <td class="price">2 840 руб</td>
+                <td>6</td>
+                <td class="total-cost">17 040 руб</td>
+                <!--<td><a class="icon remove" title="Удалить" href="#">Удалить</a></td>-->
+              </tr>
+              <tr>
+                <td class="image"><a href="#"><img src="assets/images/goods/4.jpg" alt="goods4"></a></td>
+                <td class="name"><a href="#">Veluderm Botulopeptide</a></td>
+                <td class="price">2 890 руб</td>
+                <td>3</td>
+                <td class="total-cost">8 697 руб</td>
+                <!--<td><a class="icon remove" title="Удалить" href="#">Удалить</a></td>-->
+              </tr>
+            </tbody>
+          </table>
+            
+          </div>
+          
+        </div>
+        <div class="right-column">
+          
+          <div class="tnx">Спасибо за оформление заказа №3464 в нашем магазине. О состоянии вашего заказа вы можете узнать по телефону +7 (831) 550 45 25</div>
+          
+          <section>
+            <h2>Детали заказа</h2>
+            <div class="form-group">
+              <label>ФИО получателя</label>
+              <p>Петрова Виктория Константиновна</p>
+            </div>
+            <div class="form-group">
+              <label>Адрес доставки</label>
+              <p>г.Самара, ул.Ленина, 54/1</p>
+            </div>
+            <div class="form-group">
+              <label>Контактный телефон</label>
+              <p>+7 (950) 350 21 43</p>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <p>vicpetrova@mail.ru"</p>
+            </div>
+            <div class="form-group">
+              <label>Комментарии к заказу</label>
+              <p>Поскольку Собакевич сам был человек здоровый и крепкий, то он хотел, чтобы его окружали такие же крепкие предметы.</p>
+            </div>
+          </section>
+          <section class="order-summary">
+            <h2>К оплате</h2>
+            <table>
+              <tr>
+                <td>Корзина:</td>
+                <td>107 896 руб</td>
+              </tr>
+              <tr>
+                <td>Доставка:</td>
+                <td>16 400 руб</td>
+              </tr>
+              <tr>
+                <td>Скидка:</td>
+                <td>1 720 руб</td>
+              </tr>
+            </table>
+            <hr>
+            <p class="order-total-cost">122 576 руб</p>
+          </section>          
+          
+        </div>
+                
+      </div>
+
+    </main>
+
+    <script>
+      var content = components.import.querySelector('footer');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+
+  </body>
+</html>
