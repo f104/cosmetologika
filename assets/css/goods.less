@@ -336,3 +336,45 @@
 .left-column .goods-list-recent li {
   margin: 0;
 }
+.goods-list-quick-search {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+  padding-right: 100px;
+  top: 0;
+  > div {
+    border-radius: @border-radius-base 0 @border-radius-base @border-radius-base;
+    border: 2px solid #ebeff0;
+    padding-top: 33px; // -1 от высоты инпута
+    > div {
+      padding: 0 18px;
+      background: @body-bg;
+      hr {
+        border-top: 1px solid #d3d4d8;
+        margin: 0 0 20px;        
+      }
+      ul {
+        .list-unstyled;
+        margin: 0;
+        display: flex;
+        li {
+          width: 33%;
+          text-align: center;
+          img {
+            .img-responsive;
+          }
+          h3 {
+            font-family: @heavy-font-family;
+            font-size: 12px;
+            margin-bottom: 14px;
+          }
+          .cost {
+            display: block;
+            font-size: 14px;
+          }
+        }
+      }
+    }      
+  }
+}

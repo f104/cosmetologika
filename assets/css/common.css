@@ -6611,7 +6611,7 @@ main .breadcrumb:after,
 body {
   position: relative;
 }
-body::after {
+body::_after {
   content: "";
   background: url('img/design.jpg') no-repeat;
   background-size: auto;
@@ -8585,6 +8585,60 @@ fieldset[disabled] a.user-tabs #profile .avatar a {
 }
 .left-column .goods-list-recent li {
   margin: 0;
+}
+.goods-list-quick-search {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+  padding-right: 100px;
+  top: 0;
+}
+.goods-list-quick-search > div {
+  border-radius: 2px 0 2px 2px;
+  border: 2px solid #ebeff0;
+  padding-top: 33px;
+}
+.goods-list-quick-search > div > div {
+  padding: 0 18px;
+  background: #ffffff;
+}
+.goods-list-quick-search > div > div hr {
+  border-top: 1px solid #d3d4d8;
+  margin: 0 0 20px;
+}
+.goods-list-quick-search > div > div ul {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.goods-list-quick-search > div > div ul li {
+  padding-left: 0;
+}
+.goods-list-quick-search > div > div ul li::before {
+  content: none;
+}
+.goods-list-quick-search > div > div ul li {
+  width: 33%;
+  text-align: center;
+}
+.goods-list-quick-search > div > div ul li img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.goods-list-quick-search > div > div ul li h3 {
+  font-family: "LatoWebHeavy", "LatoWebBlack", "LatoWeb", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+.goods-list-quick-search > div > div ul li .cost {
+  display: block;
+  font-size: 14px;
 }
 .cart h2 {
   line-height: 20px;

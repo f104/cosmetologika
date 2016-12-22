@@ -65,4 +65,11 @@ $(document).ready(function () {
 		closeEffect	: 'none'
   });
   
+  $('.js-qs-input').focus(function(){
+    $('.js-qs').show();
+  });
+  $('.js-qs-input').blur(function(){
+    $('.js-qs').hide();
+  });
+  
 });
