@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Контакты</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="import" href="components.html">
+    <script>
+      var components = document.querySelector('link[rel=import]');
+    </script>
+  </head>
+  <body>
+    
+    <script>
+      var content = components.import.querySelector('header');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
+    <script>
+      var content = components.import.querySelector('#comp_searchbar');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
+    <main>
+    
+      <ol class="breadcrumb">
+        <li><a href="#">Главная</a></li>
+        <li class="active">Контакты</li>
+      </ol>
+      
+      <div class="column-wrapper">
+      
+        <div class="left-column">
+          <script>
+            var content = components.import.querySelector('#comp_left');
+            document.querySelector('main .left-column').appendChild(content.cloneNode(true));
+          </script>
+          
+          <section>
+            <h3>Вы смотрели:</h3>
+            <script>
+              var content = components.import.querySelector('#comp_goods_of_day');
+              document.querySelector('main .left-column section').appendChild(content.cloneNode(true));
+            </script>
+          </section>
+          
+        </div> <!-- .left-column -->
+
+        <div class="right-column">
+
+          <section class="map" data-coord="56.282087,43.9548183">
+          </section>
+          <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyCPWVOSazsJfYLC3Tl1XRCIQkCUtKov0kc"></script>
+          <script>
+            function initMaps(){
+
+              $('.map').each(function(){
+                var coords=$(this).attr('data-coord').split(',');
+                var mapOptions = {
+                  // How zoomed in you want the map to start at (always required)
+                  zoom: 15,
+
+                  // The latitude and longitude to center the map (always required)
+                  center: new google.maps.LatLng(coords[0],coords[1]), // New York
+
+                  disableDefaultUI: true,
+                  scrollwheel: false,
+                  navigationControl: false,
+                  mapTypeControl: false,
+                  scaleControl: false,
+                  //draggable: false,
+
+                  // How you would like to style the map. 
+                  // This is where you would paste any style found on Snazzy Maps.          
+                  styles: [{"featureType": "water", "elementType": "geometry.fill", "stylers": [{"color": "#d3d3d3"}]}, {"featureType": "transit", "stylers": [{"color": "#808080"}, {"visibility": "off"}]}, {"featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [{"visibility": "on"}, {"color": "#b3b3b3"}]}, {"featureType": "road.highway", "elementType": "geometry.fill", "stylers": [{"color": "#ffffff"}]}, {"featureType": "road.local", "elementType": "geometry.fill", "stylers": [{"visibility": "on"}, {"color": "#ffffff"}, {"weight": 1.8}]}, {"featureType": "road.local", "elementType": "geometry.stroke", "stylers": [{"color": "#d7d7d7"}]}, {"featureType": "poi", "elementType": "geometry.fill", "stylers": [{"visibility": "on"}, {"color": "#ebebeb"}]}, {"featureType": "administrative", "elementType": "geometry", "stylers": [{"color": "#a7a7a7"}]}, {"featureType": "road.arterial", "elementType": "geometry.fill", "stylers": [{"color": "#ffffff"}]}, {"featureType": "road.arterial", "elementType": "geometry.fill", "stylers": [{"color": "#ffffff"}]}, {"featureType": "landscape", "elementType": "geometry.fill", "stylers": [{"visibility": "on"}, {"color": "#efefef"}]}, {"featureType": "road", "elementType": "labels.text.fill", "stylers": [{"color": "#696969"}]}, {"featureType": "administrative", "elementType": "labels.text.fill", "stylers": [{"visibility": "on"}, {"color": "#737373"}]}, {"featureType": "poi", "elementType": "labels.icon", "stylers": [{"visibility": "off"}]}, {"featureType": "poi", "elementType": "labels", "stylers": [{"visibility": "off"}]}, {"featureType": "road.arterial", "elementType": "geometry.stroke", "stylers": [{"color": "#d6d6d6"}]}, {"featureType": "road", "elementType": "labels.icon", "stylers": [{"visibility": "off"}]}, {}, {"featureType": "poi", "elementType": "geometry.fill", "stylers": [{"color": "#dadada"}]}]
+                  };
+
+                  // Get the HTML DOM element that will contain your map 
+                  // We are using a div with id="map" seen below in the <body>
+                  var mapElement = this;
+
+                  // Create the Google Map using our element and options defined above
+                  var map = new google.maps.Map(mapElement, mapOptions);
+
+                  // Let's also add a marker while we're at it
+                  var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(coords[0], coords[1]),
+                    map: map,
+                    icon: {
+                      url: 'assets/images/marker.png',
+                      // This marker is 20 pixels wide by 32 pixels high.
+                      size: new google.maps.Size(60, 67),
+                      // The origin for this image is (0, 0).
+                      origin: new google.maps.Point(0, 0),
+                      // The anchor for this image is the base of the flagpole at (0, 32).
+                      anchor: new google.maps.Point(20, 42)
+                    },
+                  });
+                });
+              }
+              initMaps();
+            </script>
+          
+            <section class="contacts">
+              
+              <form>
+                <fieldset>
+                  <div class="form-group">
+                    <label for="name">Имя</label>
+                    <input type="text" name="name" id="name" value="Виктория">
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="text" name="phone" id="phone" value="+7 (950) 350 21 43">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" value="vicpetrova@mail.ru">
+                  </div>
+                </fieldset>
+                <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+              </form>
+              
+              <div>
+                <p>Я тотчас подошел к княжне, приглашая её вальсировать, пользуясь свободой здешних обычаев, позволяющих танцевать с незнакомыми дамами. Я ехал на перекладных из Тифлиса. Вся поклажа моей тележки состояла из одного небольшого чемодана, который до половины был набит путевыми записками о Грузии.</p>
+                <ul>
+                  <li class="address">603032, г.Нижний Новгород, ул.Правдинская, 27</li>
+                  <li class="phone">+7 (831) 251 08 41</li>
+                  <li class="email"><a href="mailto:info@braini.ru">info@braini.ru</a></li>
+                  <li class="timework">пн-пт: 9:00-19:00 <span class="text-danger">сб-вс: выходные</span></li>
+                </ul>
+              </div>
+              
+            </section>
+          
+
+          <section>
+            <a href="#"><img src="assets/images/banner-big.jpg" alt="banner" class="img-responsive"></a>
+          </section>
+
+        </div> <!-- .right-column -->
+
+      </div> <!-- .row -->
+      
+    </main>
+    
+    <script>
+      var content = components.import.querySelector('footer');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
+  </body>
+</html>

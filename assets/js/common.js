@@ -58,12 +58,14 @@ $(document).ready(function () {
   
   $('.js-tab-container').easytabs();
   
-  $('.js-video-iframe').fancybox({
-    maxWidth	: 800,
-		closeClick	: false,
-		openEffect	: 'none',
-		closeEffect	: 'none'
+  $('.js-video-iframe, .js-fancy-inline').fancybox({
+    maxWidth: 800,
+    closeClick: false,
+    openEffect: 'none',
+    closeEffect: 'none',
+    padding: 0
   });
+  $('.callback button[type=reset]').click($.fancybox.close);
   
   $('.js-qs-input').focus(function(){
     $('.js-qs').show();
