@@ -4,12 +4,42 @@
 	width: 14px;
 	height: 14px;
 	margin: 0 4px 0 0;
+	border: 2px solid #acafbd;
+	border-radius: 2px;
+	background: #FFF;
+	cursor: pointer;
+}
+.jq-checkbox.checked {
+  border-color: #10c759;
+  background: #10c759;
+}
+.jq-checkbox.checked .jq-checkbox__div {
+  width: 10px;
+  height: 8px;
+  margin: 1px 0 0 0px;
+  /*border-radius: 2px;*/
+  background: #10c759 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAGtJREFUeNpi/P//PwMBUATEDgwghXiw7n8owKeID4g/QNVlggRYgVgJi8LzUEWTwc4DEoehAp5IilZAxfbAxEBE138ECALiNCj7ARAzIisE4ZD/qOAvEMsgOwXZTUZA/AyIfwKxHbqbAQIMABck7D/VNZjGAAAAAElFTkSuQmCC');
+  transition: initial;
+}
+.jq-checkbox.focused {
+	/*border: 1px solid #08C;*/
+}
+.jq-checkbox.disabled {
+	opacity: .55;
+}
+
+.filters .jq-checkbox {
+	top: -1px;
+	vertical-align: middle;
+	width: 14px;
+	height: 14px;
+	margin: 0 4px 0 0;
 	border: 1px solid #bdbfc4;
 	border-radius: 2px;
 	background: #FFF;
 	cursor: pointer;
 }
-.jq-checkbox.checked .jq-checkbox__div {
+.filters .jq-checkbox.checked .jq-checkbox__div {
   width: 10px;
 	height: 8px;
 	margin: 2px 0 0 1px;

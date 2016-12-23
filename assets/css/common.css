@@ -6768,7 +6768,7 @@ em, i {
   position: relative;
 }
 .cite-big::before {
-  content: '—';
+  content: '\2014';
   position: absolute;
   left: 0;
 }
