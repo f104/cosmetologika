@@ -256,8 +256,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('../fonts/glyphicons-halflings-regular.eot');
-  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('fonts/glyphicons-halflings-regular.eot');
+  src: url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('fonts/glyphicons-halflings-regular.woff') format('woff'), url('fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -2636,11 +2636,18 @@ input[type="search"] {
 }
 .radio > label,
 .checkbox > label {
-  min-height: 36px;
+  /*min-height: @line-height-computed; // Ensure the input doesn't jump when there is no text*/
   padding-left: 20px;
   margin-bottom: 0;
   font-weight: normal;
   cursor: pointer;
+  font-size: 14px;
+  color: #252a3d;
+}
+.radio.disabled > label,
+.checkbox.disabled > label {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 .radio input[type="radio"],
 .radio-inline input[type="radio"],
@@ -8667,6 +8674,10 @@ fieldset[disabled] a.user-tabs #profile .avatar a {
 .goods-list .goods-list-item .footer .icons {
   padding: 8px 12px;
 }
+.goods-list .goods-list-item.disabled .image img {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
 .goods-list.full {
   display: table;
   width: 100%;
@@ -8904,6 +8915,60 @@ fieldset[disabled] a.user-tabs #profile .avatar a {
   display: block;
   font-size: 14px;
 }
+.filters form {
+  padding: 0 5px;
+}
+.filters form fieldset {
+  margin-bottom: 50px;
+}
+.filters form #slider-range {
+  height: 8px;
+  background-color: #d3d4d8;
+  border-radius: 4px;
+  margin: 5px -5px;
+}
+.filters form #slider-range .ui-slider-range {
+  background: #cf1b42;
+}
+.filters form #slider-range .ui-slider-handle {
+  cursor: pointer;
+  outline: none;
+  width: 14px;
+  height: 14px;
+  background: #cf1b42;
+  border-radius: 7px;
+  top: -3px;
+}
+.filters form #slider-range .ui-slider-handle span {
+  position: absolute;
+  top: 17px;
+}
+.filters form label {
+  cursor: pointer;
+  font-size: 14px;
+  color: #252a3d;
+  line-height: 24px;
+}
+.category-list .category-list-item {
+  text-align: center;
+  margin-top: 22px;
+  margin-bottom: 12px;
+}
+.category-list .category-list-item:nth-child(4n+1) {
+  clear: left;
+}
+.category-list .category-list-item img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #d3d4d8;
+  margin-bottom: 18px;
+}
+.category-list .category-list-item h3 {
+  font-size: 16px;
+  font-family: "LatoWebHeavy", "LatoWebBlack", "LatoWeb", Helvetica, Arial, sans-serif;
+  margin-bottom: 0;
+}
 .cart h2 {
   line-height: 20px;
   margin-bottom: 20px;
@@ -9086,6 +9151,7 @@ fieldset[disabled] a.user-tabs #profile .avatar a {
 .reviews {
   padding-left: 0;
   list-style: none;
+  margin-bottom: 0;
 }
 .reviews li {
   padding-left: 0;
@@ -9425,4 +9491,111 @@ textarea.contacts form input {
 }
 .contacts > div ul li.timework::before {
   background-position: -80px -128px;
+}
+/* comments */
+.comments {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+.comments li {
+  padding-left: 0;
+}
+.comments li::before {
+  content: none;
+}
+.comments ul {
+  padding-left: 65px;
+}
+.comments li:before,
+.comments li:after {
+  content: " ";
+  display: table;
+}
+.comments li:after {
+  clear: both;
+}
+.comments li:before,
+.comments li:after {
+  content: " ";
+  display: table;
+}
+.comments li:after {
+  clear: both;
+}
+.comments li .comment {
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+.comments li .comment .c-avatar {
+  float: left;
+}
+.comments li .comment .c-avatar img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+.comments li .comment .c-content {
+  padding-left: 65px;
+}
+.comments li .comment .c-content .c-header {
+  padding: 5px 0;
+}
+.comments li .comment .c-content .c-header > * {
+  display: inline-block;
+}
+.comments li .comment .c-content .c-header .c-user {
+  font-family: "LatoWebBlack", "LatoWeb", Helvetica, Arial, sans-serif;
+  color: #252a3d;
+  margin-right: 5px;
+}
+.comments li .comment .c-content .c-header .c-date {
+  font-size: 12px;
+  margin-right: 5px;
+}
+.comments li .comment .c-content .c-text p {
+  line-height: 17px;
+  margin-bottom: 17px;
+}
+.comments li .comment .c-content button {
+  width: auto;
+}
+.comments-form {
+  max-width: 600px;
+  text-align: right;
+}
+.comments-form fieldset {
+  margin-bottom: 5px;
+}
+.comments-form textarea {
+  height: 80px;
+}
+.comments-form .rating {
+  display: inline-block;
+}
+.comments-form button {
+  width: auto;
+}
+.rating {
+  padding: 0 10px;
+}
+.rating span {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 0.9em;
+  color: #d3d4d8;
+}
+.rating span:before {
+  content: "\e006";
+}
+.rating span.selected {
+  color: #ffc000;
 }

@@ -232,11 +232,18 @@ input[type="search"] {
   margin-bottom: 10px;
 
   > label {
-    min-height: @line-height-computed; // Ensure the input doesn't jump when there is no text
+    /*min-height: @line-height-computed; // Ensure the input doesn't jump when there is no text*/
     padding-left: 20px;
     margin-bottom: 0;
     font-weight: normal;
     cursor: pointer;
+    font-size: @font-size-base;
+    color: @text-color;
+  }
+  &.disabled {
+    > label {
+      .opacity(.5);
+    }
   }
 }
 .radio input[type="radio"],

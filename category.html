@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Категория</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="import" href="components.html">
+    <script>
+      var components = document.querySelector('link[rel=import]');
+    </script>
+  </head>
+  <body>
+    
+    <script>
+      var content = components.import.querySelector('header');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
+    <script>
+      var content = components.import.querySelector('#comp_searchbar');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
+    <main>
+    
+      <ol class="breadcrumb">
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Каталог</a></li>
+        <li class="active">Для лица</li>
+      </ol>
+      
+      <div class="column-wrapper">
+      
+        <div class="left-column">
+          <script>
+            var content = components.import.querySelector('#comp_left_menu');
+            document.querySelector('main .left-column').appendChild(content.cloneNode(true));
+          </script>
+          
+          <section class="reviews-slider">
+            <h3>Отзывы</h3>
+          </section>
+          <script>
+            var content = components.import.querySelector('#comp_reviews');
+            document.querySelector('main .left-column .reviews-slider').appendChild(content.cloneNode(true));
+          </script>          
+          
+          <script>
+            var content = components.import.querySelector('#comp_left_subscribe');
+            document.querySelector('main .left-column').appendChild(content.cloneNode(true));
+            var content = components.import.querySelector('#comp_left_banner');
+            document.querySelector('main .left-column').appendChild(content.cloneNode(true));
+          </script>
+        </div> <!-- .left-column -->
+
+        <div class="right-column">
+          
+          <h1>Для лица</h1>
+          
+          <section class="category-list row">
+
+            <div class="category-list-item col-sm-3">
+              <a href="#"><img src="assets/images/category/1.jpg" alt="category"></a>
+              <h3><a href="#">Мезопрепараты</a></h3>
+            </div>
+            <div class="category-list-item col-sm-3">
+              <a href="#"><img src="assets/images/category/2.jpg" alt="category"></a>
+              <h3><a href="#">Очищение кожи</a></h3>
+            </div>
+            <div class="category-list-item col-sm-3">
+              <a href="#"><img src="assets/images/category/3.jpg" alt="category"></a>
+              <h3><a href="#">Маски</a></h3>
+            </div>
+            <div class="category-list-item col-sm-3">
+              <a href="#"><img src="assets/images/category/4.jpg" alt="category"></a>
+              <h3><a href="#">Тоники</a></h3>
+            </div>
+            <div class="category-list-item col-sm-3">
+              <a href="#"><img src="assets/images/category/5.jpg" alt="category"></a>
+              <h3><a href="#">Филлеры</a></h3>
+            </div>
+            <div class="category-list-item col-sm-3">
+              <a href="#"><img src="assets/images/category/6.jpg" alt="category"></a>
+              <h3><a href="#">Массажеры</a></h3>
+            </div>
+            <div class="category-list-item col-sm-3">
+              <a href="#"><img src="assets/images/category/7.jpg" alt="category"></a>
+              <h3><a href="#">Специальная Косметика</a></h3>
+            </div>
+            <div class="category-list-item col-sm-3">
+              <a href="#"><img src="assets/images/category/8.jpg" alt="category"></a>
+              <h3><a href="#">Кремы</a></h3>
+            </div>
+            <div class="category-list-item col-sm-3">
+              <a href="#"><img src="assets/images/category/9.jpg" alt="category"></a>
+              <h3><a href="#">Наборы</a></h3>
+            </div>
+            <div class="category-list-item col-sm-3">
+              <a href="#"><img src="assets/images/category/10.jpg" alt="category"></a>
+              <h3><a href="#">Средства от Усталости</a></h3>
+            </div>
+
+          </section>
+          
+          <section class="recent-goods">
+            <h2>Вы недавно смотрели:</h2>
+            <script>
+              var content = components.import.querySelector('#comp_recent');
+              document.querySelector('.recent-goods').appendChild(content.cloneNode(true));
+            </script>
+          </section>
+          
+        </div> <!-- .right-column -->
+
+      </div> <!-- .row -->
+      
+    </main>
+    
+    <script>
+      var content = components.import.querySelector('footer');
+      document.body.appendChild(content.cloneNode(true));
+    </script>
+    
+  </body>
+</html>

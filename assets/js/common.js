@@ -1,5 +1,7 @@
 $(document).ready(function () {
   
+  // привести все в порядок
+  
   // aside menu accordeon
   (function($) {
     $('.aside-menu > li > a').click(function(event) {
@@ -54,7 +56,7 @@ $(document).ready(function () {
     $parent.siblings('.checked').removeClass('checked');
   });
   
-  $('select, input[type=file], input[type=number], input[type=radio]').styler();
+  $('select, input[type=file], input[type=number], input[type=radio], input[type=checkbox]').styler();
   
   $('.js-tab-container').easytabs();
   
@@ -73,5 +75,24 @@ $(document).ready(function () {
   $('.js-qs-input').blur(function(){
     $('.js-qs').hide();
   });
+  
+  $( "#slider-range" ).slider({
+     range: true,
+     min: 100,
+     max: 30000,
+     values: [ 3840, 21430 ],
+     slide: function( event, ui ) {
+      $("#slider-range .ui-slider-handle" ).each(function(i){
+        $('#ui-slider-counter-'+i).text($("#slider-range").slider("values", i));
+        var l  = $('#ui-slider-counter-'+i).outerWidth();
+        $('#ui-slider-counter-'+i).css('left', -l/2+7);
+      });
+     }
+   });
+    $("#slider-range .ui-slider-handle" ).each(function(i){
+      $(this).append('<span id="ui-slider-counter-'+i+'">'+$("#slider-range").slider("values", i)+'</span>');
+      var l  = $('#ui-slider-counter-'+i).outerWidth();
+      $('#ui-slider-counter-'+i).css('left', -l/2+7);
+    });
   
 });

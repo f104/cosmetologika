@@ -997,6 +997,7 @@ section.login {
 /* review */
 .reviews {
   .list-unstyled;
+  margin-bottom: 0;
   li {
     .reviews-user {
       color: @text-color;
@@ -1169,6 +1170,81 @@ section.login {
           &::before { background-position: -32px-16*3 -128px; }
         }
       }
+    }
+  }
+}
+
+/* comments */
+.comments {
+  .list-unstyled;
+  margin: 0;
+  ul {
+    padding-left: 65px;
+  }
+  li {
+    .clearfix;
+    .comment {
+      margin-bottom: 30px;
+      max-width: 600px;
+      .c-avatar {
+        float: left;
+        img {
+          .img-responsive;
+          .img-circle;
+        }
+      }
+      .c-content {
+        padding-left: 65px;
+        .c-header {
+          padding: 5px 0;
+          > * {
+            display: inline-block;
+          }
+          .c-user {
+            font-family: @headings-font-family;
+            color: @text-color;
+            margin-right: 5px;
+          }
+          .c-date {
+            font-size: 12px;
+            margin-right: 5px;
+          }
+        }
+        .c-text p {
+          line-height: 17px;
+          margin-bottom: 17px;
+        }
+        button {
+          width: auto;
+        }
+      }
+    }
+  }
+}
+.comments-form {
+  max-width: 600px;
+  text-align: right;
+  fieldset {
+    margin-bottom: 5px;
+  }
+  textarea {
+    height: 80px;
+  }
+  .rating {
+    display: inline-block;
+  }
+  button {
+    width: auto;
+  }
+}
+.rating {
+  padding: 0 10px;
+  span {
+    .glyphicon; .glyphicon-star;
+    width: 0.9em;
+    color: #d3d4d8;
+    &.selected {
+      color: #ffc000;
     }
   }
 }
