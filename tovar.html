@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="import" href="components.html">
+    <script src="assets/js/star-rating.js"></script>
     <script>
       var components = document.querySelector('link[rel=import]');
     </script>
@@ -226,12 +227,12 @@
                     <textarea class="form-control" name="comment" placeholder="Оставьте отзыв"></textarea>
                   </div>
                 </fieldset>
-                <div class="rating">
-                  <span></span> 
-                  <span></span> 
-                  <span></span> 
-                  <span></span> 
-                  <span></span> 
+                <div class="rating star-rating">
+                  <label><span></span><input type="radio" name="stars" value="1"></label>
+                  <label><span></span><input type="radio" name="stars" value="2"></label>
+                  <label><span></span><input type="radio" name="stars" value="3"></label>
+                  <label><span></span><input type="radio" name="stars" value="4"></label>
+                  <label><span></span><input type="radio" name="stars" value="5"></label>
                 </div>
                 <button type="submit" class="btn btn-primary">Отправить</button>
               </form>

@@ -56,7 +56,7 @@ $(document).ready(function () {
     $parent.siblings('.checked').removeClass('checked');
   });
   
-  $('select, input[type=file], input[type=number], input[type=radio], input[type=checkbox]').styler();
+  //$('select, input[type=file], input[type=number], input[type=radio], input[type=checkbox]').styler();
   
   $('.js-tab-container').easytabs();
   
@@ -95,4 +95,54 @@ $(document).ready(function () {
       $('#ui-slider-counter-'+i).css('left', -l/2+7);
     });
   
+});
+
+$(window).load(function(){
+  (function ($) {
+
+    var $win = $(window),
+        $header = $('#comp_searchbar'),
+        $main = $('main'),
+        className = 'fixed',
+        shift = 0, 
+        height = $header.outerHeight(),
+        top = $header.offset().top,
+        progress = false;
+        
+        console.log(height);
+
+    fixHeader();
+
+    $win.on('scroll', fixHeader);
+
+    function fixHeader() {
+      if (progress) {
+        setTimeout(fixHeader, 400);
+        return;
+      }
+      var scrollTop = $win.scrollTop(),
+          checkpoint = shift + top;
+      if (scrollTop >= checkpoint) {
+        if (!$header.hasClass(className)) {
+          progress = true;
+          $header.addClass(className);
+          $main.attr('style', 'margin-top: '+height+'px');
+          $header.attr('style', 'top: 0');
+//          $header.animate({top: "0"}, 200, function(){
+            progress = false;
+//          });
+        }
+      } else {
+        if ($header.hasClass(className)) {
+          progress = true;
+//          $header.animate({top: "-60px"}, 200, function(){
+            $header.removeClass(className);
+            $main.attr('style', 'margin-top: 0');
+            progress = false;
+//          });
+        }
+      }
+    }
+
+  })(window.jQuery);
 });

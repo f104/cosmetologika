@@ -176,6 +176,9 @@
         top: -10px;
         right: -10px;
       }
+      a:hover img {
+        opacity: .8;
+      }
     }
     .content {
       h3 {
@@ -194,8 +197,10 @@
     }
     .footer {
       form {
-        width: 100px;
         display: inline-block;
+        button {
+          width: 100px;          
+        }
       }
       .icons {
         padding: 8px 12px;
@@ -228,6 +233,9 @@
         text-align: right;
         .buttons {
           text-align: center;
+          .counter {
+            display: none;
+          }
         }
         .cost {
           display: block;
@@ -269,6 +277,10 @@
         .buttons {
           display: inline-block;
         }
+        .counter {
+          display: inline-block;
+          margin-right: 20px;
+        }
         .cost {
           display: block;
         }
@@ -304,6 +316,9 @@
         .price {
           flex: 1;
         }
+        .counter {
+          display: none;
+        }
       }
       .cost {
         font-size: 16px;
@@ -335,6 +350,7 @@
         padding: 10px 10px 0;
         img {
           .img-responsive;
+          transition: initial;
         }
       }
       h3 {
@@ -351,6 +367,9 @@
       .cost-old {
         font-size: 12px;
         display: block;
+      }
+      a:hover img {
+        opacity: .8;
       }
     }
 }
@@ -393,6 +412,9 @@
           .cost {
             display: block;
             font-size: 14px;
+          }
+          a:hover img {
+            opacity: .8;
           }
         }
       }
@@ -453,6 +475,9 @@
       font-size: 16px;
       font-family: @heavy-font-family;
       margin-bottom: 0;
+    }
+    a:hover img {
+      opacity: .8;
     }
   }
 }

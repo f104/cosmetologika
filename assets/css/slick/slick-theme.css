@@ -127,3 +127,6 @@
   opacity: 1;
   font-size: 12px;
 }
+.big-slider .slick-dots li button::before {
+  color: #fff;
+}
